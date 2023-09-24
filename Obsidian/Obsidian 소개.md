@@ -7,6 +7,6 @@
 👉 Markdown 문법을 지원하고, 생성한 노트 간의 관계를 연결할 수 있는 기능이 탑재되어있음
 
 [[Obsidian Note 연결]]
-[[Obsidian Canvas 사용법]]
 [[Markdown 문법]]
 [[Obsidian Flugin 사용]]
+[[Obsidian Github 설정]]
