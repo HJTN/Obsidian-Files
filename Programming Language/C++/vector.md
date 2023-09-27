@@ -44,4 +44,5 @@ vector.empty();
 ```
 
 ## 참고 사이트
-## [Vector Reference](https://cplusplus.com/reference/vector/vector/)
+## 1. [CPlusPlus Vector Reference](https://cplusplus.com/reference/vector/vector/)
+## 2. [Vector Container 정리 및 사용법](https://blockdmask.tistory.com/70)
