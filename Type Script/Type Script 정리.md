@@ -76,13 +76,16 @@ interface student {
     subject: string;
     courseCompleted: boolean;
 }
-```
-※ age?: number; → age 뒤의 ?로 object 구조에서 age를 선택적 프로퍼티로 만듦
- == 함수 값을 리턴할 때 age에 값을 할당해도 되고 안 해도 됨
 
- -> method : 객체 내에서 선언된 함수 → 인터페이스 내에서 쓸 수 있음
- ex) 
- interface student {
+❇️ age?: number; 
+👉 age 뒤의 ?로 object 구조에서 age를 선택적 프로퍼티로 만듦 
+👉 함수 값을 리턴할 때 age에 값을 할당해도 되고 안 해도 됨
+```
+
+ 👉 **method** : 객체 내에서 선언된 함수 → 인터페이스 내에서 쓸 수 있음
+ 
+ ```
+interface student {
     studentID: number;
     studentName: string;
     age?: number;
@@ -92,9 +95,11 @@ interface student {
 	addComment?(comment: string): string;		// 선택적 메소드
 	addComment?: (comment: string) => string;
 }
+```
 
--> ReadOnly Property : 읽기 전용 프로퍼티, 객체 생성시 할당된 프로퍼티의 값을 바꿀 수 없음 (c언어의 const와 비슷)
-ex)
+👉  **ReadOnly Property** : 읽기 전용 프로퍼티, 객체 생성시 할당된 프로퍼티의 값을 바꿀 수 없음 (c언어의 const와 비슷)
+
+```
 interface student {
     readonly studentID: number;
     studentName: string;
@@ -105,26 +110,34 @@ interface student {
 	addComment?(comment: string): string;		// 선택적 메소드
 	addComment?: (comment: string) => string;
 }
+```
 
 7. Enum (열거형) & Literal Type
-1) Enum : 연관된 item들을 함께 묶어서 표현
-ex 1)
+1) **Enum** : 연관된 item들을 함께 묶어서 표현
+
+```
 enum genderType {
     Male,           // Male = 0
     Female,         // Female = 1
     genderNeutral   // genderNeutral = 2
 }
--> Numeric Enum (숫자 열거형)
-ex 2)
+
+👉 Numeric Enum (숫자 열거형)
+```
+
+```
 enum genderTypeString {     // string enum
     Male = 'male',
     Female = 'female',
     genderNeutral = 'genderneutral',
 }
--> String Enum (문자열 열거형)
 
-2) Literal Type : |(파이프) 로 property 값 구분
-ex)
+👉 String Enum (문자열 열거형)
+```
+
+2) **Literal Type** : |(파이프) 로 property 값 구분
+
+```
 interface student {
     readonly studentID: number,
     studentName: string,
@@ -135,15 +148,19 @@ interface student {
     addComment?(comment: string): string,
     addComment?: (Comment: string) => string;
 };
--> 객체의 변수 선언 시 : student를 붙여줘야함
--> string으로 type 유추함으로 인해 오류 발생함
+```
+
+👉 객체의 변수 선언 시 : student를 붙여줘야함
+👉 string으로 type 유추함으로 인해 오류 발생함
 
 8. Any Type, Union Type, Type Aliases, Type Guards
-1) Any Type : 어떤 type의 값이든 변수에 할당 가능
-ex)
+1) **Any Type** : 어떤 type의 값이든 변수에 할당 가능
+
+```
 let someValue: any = 5;
 someValue = 'hello';
 someValue = true;
+```
 -> 오류 발생 X
 ※ 코드의 유지 보수를 위해 any 타입은 피하는 것이 좋다!
 
