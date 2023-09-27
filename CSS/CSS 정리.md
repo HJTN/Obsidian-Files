@@ -8,7 +8,9 @@
 
 ## CSS 문법
 ---
-### (선택자) { (속성명): (속성값); (속성명): (속성값); }
+```
+(선택자) { (속성명): (속성값); (속성명): (속성값); }
+```
 
 ### 선택자 종류
 
@@ -49,12 +51,52 @@
 
 ```
 <style>
-
-h1 { color: navy; }
-
-h1, h2 { text-align: center; }
-
-h1, h2, p { background-color: lightgray; }
-
+	h1 { color: navy; }
+	h1, h2 { text-align: center; }
+	h1, h2, p { background-color: lightgray; }
 </style>
 ```
+
+### 주석표시
+
+```
+/* 주석 내용 */
+```
+
+### CSS 적용 방법
+
+1. **인라인 스타일(Inline style)**: HTML 요소 내부에 style 속성을 사용
+
+```
+<h2 style="color:green; text-decoration:underline">
+	인라인 스타일을 이용하여 스타일을 적용하였습니다.
+</h2>
+```
+
+2. **내부 스타일 시트(Internal style sheet)**: head 태그 안에 style 태그를 사용
+
+```
+<head>
+	<style>
+		body { background-color: lightyellow; }
+		h2 { color: red; text-decoration: underline; }
+	</style>
+</head>
+```
+
+3. **외부 스타일 시트(External style sheet)**: 외부에 작성된 스타일 시트 파일(.css) 이용
+👉 웹 페이지의 head 태그에 link 태그를 사용하여 외부 스타일 시트를 포함해야만 스타일이 적용됨
+
+```
+<head>
+	<link rel="stylesheet" href="/examples/media/expand_style.css">
+</head>
+```
+
+※ 스타일 적용 우선순위
+
+인라인 스타일
+
+내부/외부 스타일 시트
+
+웹 브라우저 기본 스타일
