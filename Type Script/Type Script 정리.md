@@ -1,8 +1,5 @@
 ## Type Script
-- 버그 줄임
-- 쉬운 유지 보수
-- 질 좋은 코드
-
+👉 버그 줄임 + 쉬운 유지 보수 + 질 좋은 코드
 👉 Java Script 기반으로한 언어 
 자바 스크립트의 모든 기능 포함 + 자바 스크립트에 포함되지 않은 기능 포함 = Type Script
 👉 Java Script보다 강력하고 upgrade된 java script라고 생각
@@ -32,20 +29,28 @@ console.log(add(3, 5));
 2. tsc --init : ts 실행 후 돌아왔을 때/ts code 작성 후 선언된 변수에 오류 발생 시 입력 (vs code 오류)
 3. tsc -w : typescript compiler가 변경된 ts 파일 감시 -> 변경 내용을 자동으로 컴파일
 
-4. Type Inference(추론)
--> let a = 5;에서 a변수에 5를 할당하는 순간 type 추론에 의해 a의 type이 number로 인식됨
--> ☆ type 표기가 없는 경우, 코드를 읽고 분석하여 타입 유추
+4. **Type Inference(추론)**
+👉 let a = 5;에서 a변수에 5를 할당하는 순간 type 추론에 의해 a의 type이 number로 인식됨
+👉 type 표기가 없는 경우, 코드를 읽고 분석하여 타입 유추
+
+```
 function calculateCodingIQ(lostPoints) {
     return 100 - lostPoints;
 }
--> 매개변수의 type이 어떻든 간에 function의 반환값이 number라는 것을 type 추론을 통해 알아냄
 
-5. Type Specification(명시) : 변수 선언 시, 변수 값의 type 명시 -> 변수 값의 데이터 타입 지정
-※ Syntax
-Ex 1) let x:(type 명시시 콜론 필요) string(type) = '문자열'(value);
-Ex 2) function getStudentDetails(studentID: para_Type): (type) { content }
--> 함수의 type부분에 object를 쓰는 대신 { object 구조 } 이런 방식으로 써도 됨
-ex) 
+👉 매개변수의 type이 어떻든 간에 function의 반환값이 number라는 것을 type 추론을 통해 알아냄
+```
+
+5. **Type Specification(명시)** 
+👉 변수 선언 시, 변수 값의 type 명시 -> 변수 값의 데이터 타입 지정
+
+```
+let x:(type 명시시 콜론 필요) string(type) = '문자열'(value);
+
+function getStudentDetails(studentID: para_Type): (type) { content }
+👉 함수의 type부분에 object를 쓰는 대신 { object 구조 } 이런 방식으로 써도 됨
+
+예시)
 function getStudentDetails(studentID: number): {
 	studentID: number;
 	studentName: string;
@@ -56,11 +61,13 @@ function getStudentDetails(studentID: number): {
 } {
 	content...
 }
+```
 
-6. Interface
--> 5번 특성에서 사용한 object 구조 방식을 따로 정의하여 type으로 사용
--> 인터페이스를 타입으로 가지면, 인터페이스의 구조를 그 값으로 가지도록 강제됨
-ex) 
+6. **Interface**
+👉 5번 특성에서 사용한 object 구조 방식을 따로 정의하여 type으로 사용
+👉 인터페이스를 타입으로 가지면, 인터페이스의 구조를 그 값으로 가지도록 강제됨
+
+```
 interface student {
     studentID: number;
     studentName: string;
@@ -69,6 +76,7 @@ interface student {
     subject: string;
     courseCompleted: boolean;
 }
+```
 ※ age?: number; → age 뒤의 ?로 object 구조에서 age를 선택적 프로퍼티로 만듦
  == 함수 값을 리턴할 때 age에 값을 할당해도 되고 안 해도 됨
 
