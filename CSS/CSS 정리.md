@@ -31,28 +31,23 @@
 👉 <h2 id="heading">이 부분에 스타일을 적용합니다.</h2>
 ```
 
-3) 클래스(class) 선택자: 특정 집단의 여러 요소를 한 번에 선택할 때 사용
+3. **클래스(class) 선택자**: 특정 집단의 여러 요소를 한 번에 선택할 때 사용
 
+```
 <style>
-
-.headings { color: lime; text-decoration: overline; }
-
+	.headings { color: lime; text-decoration: overline; }
 </style>
 
-...
+👉 <h2 class="headings">이 부분에 스타일을 적용합니다.</h2>
+👉 <p>class 선택자를 이용하여 스타일을 적용할 HTML 요소들을 한 번에 선택할 수 있습니다.</p>
+👉 <h3 class="headings">이 부분에도 같은 스타일을 적용합니다.</h3>
+```
 
-<h2 class="headings">이 부분에 스타일을 적용합니다.</h2>
+4. **그룹(group) 선택자**: 언급한 여러 선택자를 같이 사용하고자 할 때 사용
+👉 여러 선택자를 쉼표(,)로 구분하여 연결
+👉 코드를 간결하게 만들어 줌
 
-<p>class 선택자를 이용하여 스타일을 적용할 HTML 요소들을 한 번에 선택할 수 있습니다.</p>
-
-<h3 class="headings">이 부분에도 같은 스타일을 적용합니다.</h3>
-
-4) 그룹(group) 선택자: 언급한 여러 선택자를 같이 사용하고자 할 때 사용
-
-- 여러 선택자를 쉼표(,)로 구분하여 연결
-
-코드를 간결하게 만들어 줌
-
+```
 <style>
 
 h1 { color: navy; }
@@ -62,3 +57,4 @@ h1, h2 { text-align: center; }
 h1, h2, p { background-color: lightgray; }
 
 </style>
+```
