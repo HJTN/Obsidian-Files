@@ -309,29 +309,41 @@ ul { list-style: square inside url("/examples/images/img_list_marker.png"); }
 
 ### 테이블 속성
 
-1. border 속성: 테이블의 테두리 설정
+1. **border** 속성: 테이블의 테두리 설정
 
+```
 table, th, td { border: 2px solid orange; }
+```
 
-2. border-collapse 속성: 속성값=collapse로 설정하면 테이블의 테두리 한 줄로 표현
+2. **border-collapse** 속성: 속성값=collapse로 설정하면 테이블의 테두리 한 줄로 표현
 
+```
 table { border-collapse: collapse; }
+```
 
-3. border-spacing 속성: 테이블 요소(th, td)간의 여백 설정
+3. **border-spacing** 속성: 테이블 요소(th, td)간의 여백 설정
 
+```
 table { width: 100%; border-collapse: seperate; border-spacing: 20px 30px; }
+```
 
-4. text-align 속성: 텍스트의 수평 방향 정렬 설정
+4. **text-align** 속성: 텍스트의 수평 방향 정렬 설정
 
+```
 th { text-align: left/center/right; }
+```
 
-5. vertical-align 속성: 텍스트의 수직 방향 정렬 설정
+5. **vertical-align** 속성: 텍스트의 수직 방향 정렬 설정
 
+```
 th { vertical-align: top/center/bottom; height: 50px; }
+```
 
-6. border-bottom 속성: 수평 나눔선만으로 만든 테이블
+6. **border-bottom** 속성: 수평 나눔선만으로 만든 테이블
 
+```
 th, td { padding: 10px; border-bottom: 1px solid #CD5C5C; }
+```
 
 7. **:hover 선택자**: tr 태그에 마우스를 올리면 행 전체가 하이라이트 되도록 만든 테이블
 
@@ -339,8 +351,10 @@ th, td { padding: 10px; border-bottom: 1px solid #CD5C5C; }
 tr:hover { background-color: #F5F5F5; }25
 ```
 
-8. :nth-child 선택자: 얼룩무늬 효과를 설정한 테이블
+8. **:nth-child 선택자**: 얼룩무늬 효과를 설정한 테이블
 
 ```
 tr:nth-child(odd) { background-color: #F3F3F3; }
 ```
+
+## [참고 사이트](http://www.tcpschool.com/css/intro)
