@@ -251,20 +251,96 @@ h2 { text-shadow: 2px 1px #3399CC; }
 3. **font-variant** 속성 👉 속성값이 small-caps로 설정되면, 텍스트에 포함된 영문자 중 모든 소문자를 작은 대문자(small-caps) 글꼴로 변경
 👉 대문자는 기존 크기 그대로 출력
 
+```
 .smallCaps { font-variant: small-caps/normal; }
+```
 
-4. font-weight 속성: 텍스트를 얼마나 두껍게 표현할지를 설정
+4. **font-weight** 속성 👉 텍스트를 얼마나 두껍게 표현할지 설정
+👉 속성값: lighter, normal, bold, bolder, 숫자 등
 
-속성값: lighter, normal, bold, bolder, 숫자 등
-
+```
 .bold { font-weight: 600/normal/bolder; }
+```
 
-5. font-size 속성: 텍스트의 크기 설정
+5. **font-size** 속성 👉 텍스트의 크기 설정
+👉 절대적/상대적 크기
+👉 백분율 단위(%): 기본 크기를 100%로 놓고, 그에 대한 상대적인 크기를 설정
+👉 배수 단위(em): 기본 크기를 1em으로 놓고, 그에 대한 상대적인 크기를 설정, 웹 브라우저를 통해 크기를 재조정 가능
+👉 픽셀 단위(px): 스크린의 픽셀(pixel)을 기준으로 하는 절대적인 크기를 설정
 
-절대적/상대적 크기
+### 링크 설정
 
-백분율 단위(%): 기본 크기를 100%로 놓고, 그에 대한 상대적인 크기를 설정
+```
+a:link, a:visited {
+	background-color: #FFA500;
+	color: maroon;
+	padding: 15px 25px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block; 
+}
+```
 
-배수 단위(em): 기본 크기를 1em으로 놓고, 그에 대한 상대적인 크기를 설정, 웹 브라우저를 통해 크기를 재조정 가능
+### 리스트 설정
 
-픽셀 단위(px): 스크린의 픽셀(pixel)을 기준으로 하는 절대적인 크기를 설정
+1. **list-style-type** 속성 👉 리스트에 다양한 마커 설정
+
+```
+.temp { list-style-type: circle/square/upper-alpha/lower-roman 등; }
+```
+
+2. **list-style-image** 속성 👉 이미지를 마커로 설정
+
+```
+.imageMarker { list-style-image: url("/examples/images/img_list_marker.png"); }
+```
+
+3. **list-style-position** 속성 👉 리스트 요소의 위치 설정 (기본 속성값: outside)
+
+```
+.inside { list-style-position: outside/inside; }
+```
+
+4. **list-style 속성 한 번에 적용하기**
+
+```
+ul { list-style: square inside url("/examples/images/img_list_marker.png"); }
+```
+
+### 테이블 속성
+
+1. border 속성: 테이블의 테두리 설정
+
+table, th, td { border: 2px solid orange; }
+
+2. border-collapse 속성: 속성값=collapse로 설정하면 테이블의 테두리 한 줄로 표현
+
+table { border-collapse: collapse; }
+
+3. border-spacing 속성: 테이블 요소(th, td)간의 여백 설정
+
+table { width: 100%; border-collapse: seperate; border-spacing: 20px 30px; }
+
+4. text-align 속성: 텍스트의 수평 방향 정렬 설정
+
+th { text-align: left/center/right; }
+
+5. vertical-align 속성: 텍스트의 수직 방향 정렬 설정
+
+th { vertical-align: top/center/bottom; height: 50px; }
+
+6. border-bottom 속성: 수평 나눔선만으로 만든 테이블
+
+th, td { padding: 10px; border-bottom: 1px solid #CD5C5C; }
+
+7. **:hover 선택자**: tr 태그에 마우스를 올리면 행 전체가 하이라이트 되도록 만든 테이블
+
+```
+tr:hover { background-color: #F5F5F5; }25
+```
+
+8. :nth-child 선택자: 얼룩무늬 효과를 설정한 테이블
+
+```
+tr:nth-child(odd) { background-color: #F3F3F3; }
+```
