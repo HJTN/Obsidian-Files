@@ -122,8 +122,8 @@
 
 ### 배경 설정
 
-1. background-color 👉 배경색 설정
-2. background-image 👉 배경 이미지 설정
+1. **background-color** 👉 배경색 설정
+2. **background-image** 👉 배경 이미지 설정
 
 ```
 <style>
@@ -131,7 +131,7 @@
 </style>
 ```
 
-3. background-repeat 👉 수평, 수직 방향으로 반복되어 나타남
+3. **background-repeat** 👉 수평, 수직 방향으로 반복되어 나타남
 
 ```
 <style> 
@@ -141,7 +141,7 @@
 ※ repeat-x: 수평 반복, repeat-y: 수직 반복, no-repeat: 반복x
 ```
 
-4. background-position 👉 배경 이미지의 상대 위치 설정
+4. **background-position** 👉 배경 이미지의 상대 위치 설정
 
 ```
 <style>
@@ -156,4 +156,73 @@
 1. left top    4. right top    7. center top
 2. left center 5. right center 8. center center
 3. left bottom 6. right bottom 9. center bottom
+
+※ 상대 위치를 px, %로 직접 명시 가능 (기준: left top)
+background-position: 100px 200px;
 ```
+
+5. **background-attachment** 👉 배경 이미지를 해당 위치를 고정, 스크롤과는 무관하게 화면 위치에서 이동하지 않음
+
+```
+<style>
+	body {
+		background-image: url("/examples/images/img_man.png");
+		background-repeat: no-repeat;
+		background-position: left bottom;
+		background-attachment: fixed;
+	} 
+</style>
+```
+
+6. **background 속성 한번에 적용** 👉 한 줄에 배경 설정 가능
+
+```
+<style>
+	body { background: #FFCCCC url("/examples/images/img_man.png") no-repeat left bottom fixed; } 
+</style>
+```
+
+### 텍스트
+1. **color 속성** 👉 텍스트의 색상 설정
+2. direction 속성: 텍스트가 써지는 방향 설정 ( rtl / ltr(기본) )
+3. letter-spacing 속성: 텍스트 내의 글자 사이의 간격 설정
+
+```
+.decLetterSpacing { letter-spacing: -3px; }
+```
+
+4. word-spacing 속성: 텍스트 내의 단어 사이의 간격 설정
+
+```
+.decWordSpacing { word-spacing: -3px; }
+```
+
+5. text-indent 속성: 단락의 첫 줄에 들여쓰기 설정
+
+```
+.paraIndent { text-indent: 30px; }
+```
+
+6. text-align 속성: 텍스트의 수평 방향 정렬 설정 ( left / right / center )
+
+7. text-decoration 속성: 텍스트에 여러 가지 효과를 설정/제거에 사용
+
+```
+h2 { text-decoration: overline/line-through/underline/none; }
+```
+
+8. text-transform 속성: 영문자에 대한 대소문자/단어의 첫 문자만 대문자 설정
+
+```
+h2 { text-transform: uppercase/lowercase/capitalize; }
+```
+
+9. line-height 속성: 텍스트의 줄 간격 설정
+
+```
+.narrowLineHeight { line-height: 0.8; }
+```
+
+10. text-shadow 속성: 텍스트에 간단한 그림자 효과 설정
+
+h2 { text-shadow: 2px 1px #3399CC; }
