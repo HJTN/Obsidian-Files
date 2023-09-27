@@ -1,4 +1,4 @@
-## Obsidian Flugin 사용 방법
+## Obsidian Plugin 사용 방법
 ### 1. Obsidian 화면에서 좌측 아래쪽의 설정 탭 클릭
 
 ![[Pasted image 20230924175726.png|600x500]]

@@ -8,5 +8,5 @@
 
 [[Obsidian Note 연결]]
 [[Markdown 문법]]
-[[Obsidian Flugin 사용]]
+[[Obsidian Plugin 사용]]
 [[Obsidian Github 설정]]

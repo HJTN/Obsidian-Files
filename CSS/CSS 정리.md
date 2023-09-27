@@ -23,15 +23,13 @@
 
 2. **아이디(id) 선택자**: CSS를 적용할 대상으로 특정 요소를 선택할 때 사용
 
+```
 <style>
-
-#heading { color: teal; text-decoration: line-through; }
-
+	#heading { color: teal; text-decoration: line-through; }
 </style>
 
-...
-
-<h2 id="heading">이 부분에 스타일을 적용합니다.</h2>
+👉 <h2 id="heading">이 부분에 스타일을 적용합니다.</h2>
+```
 
 3) 클래스(class) 선택자: 특정 집단의 여러 요소를 한 번에 선택할 때 사용
 
