@@ -183,46 +183,88 @@ background-position: 100px 200px;
 ```
 
 ### 텍스트
-1. **color 속성** 👉 텍스트의 색상 설정
-2. direction 속성: 텍스트가 써지는 방향 설정 ( rtl / ltr(기본) )
-3. letter-spacing 속성: 텍스트 내의 글자 사이의 간격 설정
+1. **color** 속성 👉 텍스트의 색상 설정
+2. **direction** 속성 👉 텍스트가 써지는 방향 설정 ( rtl / ltr(기본) )
+3. **letter-spacing** 속성 👉 텍스트 내의 글자 사이의 간격 설정
 
 ```
 .decLetterSpacing { letter-spacing: -3px; }
 ```
 
-4. word-spacing 속성: 텍스트 내의 단어 사이의 간격 설정
+4. **word-spacing** 속성 👉 텍스트 내의 단어 사이의 간격 설정
 
 ```
 .decWordSpacing { word-spacing: -3px; }
 ```
 
-5. text-indent 속성: 단락의 첫 줄에 들여쓰기 설정
+5. **text-indent** 속성 👉 단락의 첫 줄에 들여쓰기 설정
 
 ```
 .paraIndent { text-indent: 30px; }
 ```
 
-6. text-align 속성: 텍스트의 수평 방향 정렬 설정 ( left / right / center )
+6. **text-align** 속성 👉 텍스트의 수평 방향 정렬 설정 ( left / right / center )
 
-7. text-decoration 속성: 텍스트에 여러 가지 효과를 설정/제거에 사용
+7. **text-decoration** 속성 👉 텍스트에 여러 가지 효과를 설정/제거에 사용
 
 ```
 h2 { text-decoration: overline/line-through/underline/none; }
 ```
 
-8. text-transform 속성: 영문자에 대한 대소문자/단어의 첫 문자만 대문자 설정
+8. **text-transform** 속성 👉 영문자에 대한 대소문자/단어의 첫 문자만 대문자 설정
 
 ```
 h2 { text-transform: uppercase/lowercase/capitalize; }
 ```
 
-9. line-height 속성: 텍스트의 줄 간격 설정
+9. **line-height** 속성 👉 텍스트의 줄 간격 설정
 
 ```
 .narrowLineHeight { line-height: 0.8; }
 ```
 
-10. text-shadow 속성: 텍스트에 간단한 그림자 효과 설정
+10. **text-shadow** 속성 👉 텍스트에 간단한 그림자 효과 설정
 
+```
 h2 { text-shadow: 2px 1px #3399CC; }
+```
+
+### 글꼴 설정
+
+1. **font-family** 속성 👉 하나의 글꼴만/여러 개의 글꼴을 같이 설정
+👉 여러 개의 글꼴로 설정되어 있으면, 웹 브라우저는 위에서부터 순서대로 글꼴을 읽어 들임
+👉 사용자의 컴퓨터에 첫 번째로 읽어 들인 글꼴이 없으면 다음 글꼴을 확인
+👉 글꼴의 이름이 한 단어 이상이면, 따옴표를 사용
+👉 여러 개의 글꼴을 나열할 때에는 쉼표(,)로 구분
+
+```
+.serif { font-family: "Times New Roman", Times, serif; }
+```
+
+2. **font-style** 속성 👉 주로 이탤릭체를 사용하기 위해 사용
+👉 normal(일반), italic(이탤릭체), oblique(텍스트 기울기)
+
+```
+.normal { font-style: normal; }
+```
+
+3. **font-variant** 속성 👉 속성값이 small-caps로 설정되면, 텍스트에 포함된 영문자 중 모든 소문자를 작은 대문자(small-caps) 글꼴로 변경
+👉 대문자는 기존 크기 그대로 출력
+
+.smallCaps { font-variant: small-caps/normal; }
+
+4. font-weight 속성: 텍스트를 얼마나 두껍게 표현할지를 설정
+
+속성값: lighter, normal, bold, bolder, 숫자 등
+
+.bold { font-weight: 600/normal/bolder; }
+
+5. font-size 속성: 텍스트의 크기 설정
+
+절대적/상대적 크기
+
+백분율 단위(%): 기본 크기를 100%로 놓고, 그에 대한 상대적인 크기를 설정
+
+배수 단위(em): 기본 크기를 1em으로 놓고, 그에 대한 상대적인 크기를 설정, 웹 브라우저를 통해 크기를 재조정 가능
+
+픽셀 단위(px): 스크린의 픽셀(pixel)을 기준으로 하는 절대적인 크기를 설정
