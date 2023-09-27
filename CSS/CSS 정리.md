@@ -122,5 +122,38 @@
 
 ### 배경 설정
 
-1. background-color
-2. 👉 
+1. background-color 👉 배경색 설정
+2. background-image 👉 배경 이미지 설정
+
+```
+<style>
+	body { background-image: url("/examples/images/img_background_good.png"); }
+</style>
+```
+
+3. background-repeat 👉 수평, 수직 방향으로 반복되어 나타남
+
+```
+<style> 
+	body { background-image: url("/examples/images/img_man.png"); background-repeat: repeat-x; } 
+</style>
+
+※ repeat-x: 수평 반복, repeat-y: 수직 반복, no-repeat: 반복x
+```
+
+4. background-position 👉 배경 이미지의 상대 위치 설정
+
+```
+<style>
+	body {
+		background-image: url("/examples/images/img_man.png");
+		background-repeat: no-repeat;
+		background-position: top right;
+	}
+ </style>
+
+※ 키워드 조합
+1. left top    4. right top    7. center top
+2. left center 5. right center 8. center center
+3. left bottom 6. right bottom 9. center bottom
+```
