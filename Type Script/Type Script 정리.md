@@ -18,20 +18,16 @@ console.log(add(3, 5));
 
 2. **객체지향적**
 3. **컴파일 타임 오류**
-
 ❇️ **컴파일** : 어떤 언어의 코드 -> 다른 언어로 변환 과정
+4. 프로그래밍 언어인 동시에 컴파일러
 
-4. 프로그래밍 언어인 동시에 컴파일러, TS -> JS
+### TS Download & 실행
+👉 **NPM (Node Package Manager)** : 타입스크립트를 설치하기 위해 사용되는 도구
+👉 NPM은 Node JS의 한 부분 (Node JS 설치 필요)
+👉 **npm install -g typescript** : Type Script Compiler -> tsc(TypeScript Compiler) 명령어를 사용해서 TS를 JS로 변환 가능
+👉 node (확장자가 js인 파일이름 ex. app.js, ... etc) : 작성한 코드 실행
 
-# TS Download & 실행
--> NPM (Node Package Manager) : 타입스크립트를 설치하기 위해 사용되는 도구
--> NPM은 Node JS의 한 부분 = Node JS 설치 필요
--> npm install -g typescript
-	 : Type Script Compiler
-	 -> tsc(TypeScript Compiler) 명령어를 사용해서 TS를 JS로 변환 가능
--> node (확장자가 js인 파일이름 ex. app.js, ... etc) : 작성한 코드 실행
-
-# TS 작성
+### TS 작성
 1. tsc (확장자가 ts인 파일이름 (ex. app.ts, ... 등))
 2. tsc --init : ts 실행 후 돌아왔을 때/ts code 작성 후 선언된 변수에 오류 발생 시 입력 (vs code 오류)
 3. tsc -w : typescript compiler가 변경된 ts 파일 감시 -> 변경 내용을 자동으로 컴파일
