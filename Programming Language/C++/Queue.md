@@ -1,5 +1,2 @@
-``` C++
-#include <stack>
 
-stack<int> stack;
-```
+#include <queue>
