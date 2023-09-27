@@ -93,10 +93,34 @@
 </head>
 ```
 
-※ 스타일 적용 우선순위
+#### 스타일 적용 우선순위
 
-인라인 스타일
+1. 인라인 스타일
+2. 내부/외부 스타일 시트
+3. 웹 브라우저 기본 스타일
 
-내부/외부 스타일 시트
+## CSS 기본 속성
+---
+### 색상
 
-웹 브라우저 기본 스타일
+![[css_colors.png]]
+👉 색상 이름으로 표현
+👉 RGB 색상값으로 표현: 범위(0~255)
+👉 16진수 색상값으로 표현: 범위(00~FF)
+
+```
+<style>
+	.blue { color: rgb(0,0,255); }
+	.green { color: rgb(0,128,0); }	
+	.silver { color: rgb(192,192,192); } </style>
+<style>
+	.blue { color: #0000FF; }
+	.green { color: #008000; }
+	.silver { color: #C0C0C0; }
+</style>
+```
+
+### 배경 설정
+
+1. background-color
+2. 👉 
