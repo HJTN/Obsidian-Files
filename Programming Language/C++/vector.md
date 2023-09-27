@@ -16,31 +16,31 @@ vector<{Type}> {변수명}({Vector 크기});
 ### Value 추가
 
 ``` C++
-
+vector.push_back();
 ```
 
-### Value 삭제
+### Vector의 마지막 Value 삭제
 
 ``` C++
-
+vector.pop_back();
 ```
 
-### Vector의 맨 위의 Value 확인
+### Vector의 마지막 Value 확인
 
 ``` C++
-
+vector.back();
 ```
 
 ### Vector의 크기 확인
 
 ``` c++
-
+vector.size();
 ```
 
 ### Vector가 비어있는지 확인
 
 ``` C++
-
+vector.empty();
 ```
 
 ## 참고 사이트
