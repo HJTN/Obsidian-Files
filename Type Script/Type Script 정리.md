@@ -160,26 +160,32 @@ interface student {
 let someValue: any = 5;
 someValue = 'hello';
 someValue = true;
+
+👉 오류 발생 X
+👉 코드의 유지 보수를 위해 any 타입은 피하는 것이 좋다!
 ```
--> 오류 발생 X
-※ 코드의 유지 보수를 위해 any 타입은 피하는 것이 좋다!
 
-2) Union Type : 제한된 타입들을 동시에 지정
--> |(파이프)로 타입 구분만 하면 됨
-ex)
+2) **Union Type** : 제한된 타입들을 동시에 지정
+👉 |(파이프)로 타입 구분만 하면 됨
+
+```
 let someValue: number | string
--> someValue는 숫자 혹은 문자열만 값으로 지정 가능
+👉 someValue는 숫자 혹은 문자열만 값으로 지정 가능
+```
 
-3) Type Aliases : 반복되는 union type 등을 하나의 타입으로 새로 지정하고 재활용
-ex)
+3) **Type Aliases** : 반복되는 union type 등을 하나의 타입으로 새로 지정하고 재활용
+
+```
 type strOrNum = number | string;
+```
 
-4) Type Guards : 
-	union type을 쓰는 변수와 union type 중 하나의 type을 쓰는 변수 
-	둘 사이에 데이터 이동이 있을 때 오류 발생을 막기 위해 사용
--> typeof Operator(연산자)와 조건문 사용
--> typeof Operator : 변수의 데이터 타입을 반환하는 연산자
-ex)
+4) **Type Guards**
+👉 union type을 쓰는 변수와 union type 중 하나의 type을 쓰는 변수 
+👉 둘 사이에 데이터 이동이 있을 때 오류 발생을 막기 위해 사용
+👉 typeof Operator(연산자)와 조건문 사용
+❇️ **typeof** : 변수의 데이터 타입을 반환하는 연산자
+
+```
 // price의 type : string | number, itemPrice의 type : number일 때
 if (typeof price === 'string') {    // price 타입이 string일 경우
 	itemPrice = 0;
@@ -187,16 +193,20 @@ if (typeof price === 'string') {    // price 타입이 string일 경우
 else {	// price 타입이 number일 경우
 	itemPrice = price;
 }
+```
 
 9. 함수의 반환 타입, 선택적 매개변수, 매개변수의 디폴트 값
-1) 함수의 반환 타입
+1) **함수의 반환 타입**
+```
 function 함수이름 (매개변수1, 매개변수2): 함수의 반환 타입 {
 
 }
--> void, string, string[], ... 등등
-※ 함수에 정의된 모든 매개변수 -> 함수에 필요하다고 가정 = 어느 하나라도 빠뜨리면 오류 발생!
 
-2) 선택적 매개변수
+👉 void, string, string[], ... 등등
+❇️ 함수에 정의된 모든 매개변수 👉 함수에 필요하다고 가정 (어느 하나라도 빠뜨리면 오류 발생!)
+```
+
+2) **선택적 매개변수**
 function 함수이름 (매개변수1: 타입, 매개변수2?: 타입): 함수의 반환 타입 {
 
 }
