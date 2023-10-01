@@ -104,6 +104,27 @@ fun main() {
 	println(intArr)
 }
 ```
+# Collection List
+---
+## listOf
+👉 추가한 객체를 대체, 추가, 삭제하지 못함
+## mutableListOf
+👉 추가한 객체를 대체, 추가, 삭제 가능
+👉 add, sort, shuffle 등 함수 지원
+
+``` kotlin
+fun main() {
+	val a = listOf<Int>(1,2,3)
+	val b = mutableListOf<Int>()
+
+	b.add(1)
+	b.add(2)
+	b.add(3)
+	b.add(2,6)
+	println(a)
+	println(b)
+}
+```
 
 # 조건문
 ---
@@ -196,111 +217,22 @@ fun main() {
 }
 👉 label이 지정된 반복문을 기준으로 즉시 break 됨
 ```
-# Class 생성
+# 함수 생성
 ---
-👉 Java와 달리 생성자를 따로 만들 필요 없음
-👉 객체 생성 시, 클래스의 속성에 따라 입력해주면 됨
 
 ``` kotlin
-class User(var name: String, var age: Int, val birth: String) {
-	fun printUser() {
-		println("$name $age $birth")
-	}
+fun main() {
+	println("Hello Kotlin!")
 }
 
-// init : 해당 Class를 토대로 객체 생성 시 최초 실행되는 부분 (여러 개 생성 가능)
-class User(var name: String, var age: Int, val birth: String) {
-	init {
-		println("$name $age $birth")
-	}
-	init {
-		println(age)
-	}
+// 함수 기본형 👉 fun 함수명(매개변수: Type): Return Type {}
+fun add(a: Int, b: Int, c: Int): Int {
+	return a + b + c
 }
+
+// 단일 표현식 함수
+fun add(a: Int, b: Int, c: Int) = a + b + c
 ```
-## 상속
-
-👉 부모 클래스에 open 키워드가 설정되어 있어야 함
-👉 서브 클래스의 속성 이름은 부모 클래스의 속성 이름과 달라야 함
-👉 함수를 override할 경우, override 키워드 사용 (부모 클래스의 함수에 open 키워드가 설정되어 있어야 함)
-
-``` kotlin
-open class Animal(var name: String, var age: Int) {
-	open fun introduce() {
-		println("$name $age")
-	}
-}
-
-class Dog(var dog_name: String, var dog_age: Int) : Animal(dog_name, dog_age) {
-	fun dogIntroduce() {
-		super.introduce()
-	}
-
-	override fun introduce() {
-		println("Overrided!")
-	}
-}
-```
-
-## 추상 클래스
-👉 Java와 동일
-
-``` kotlin
-abstract class Animal {
-	abstract fun eat()
-	fun dog() {
-		println("멍멍")
-	}
-}
-
-class Cat : Animal() {
-	override fun eat() {
-		println("츄르")
-	}
-}
-```
-
-## 인터페이스
-👉 Java와 달리 추상 함수와 속성과 일반 함수 선언 가능
-👉 생성자는 생성 불가능
-👉 구현부({})가 있으면, open 함수로 간주하고, 없으면 abstract 함수로 간주함
-
-``` kotlin
-interface Runner {
-	// 추상 함수로 간주
-	fun run()
-}
-
-interface Eater {
-	// open 함수로 간주
-	fun eat() {
-		println("음식")
-	}
-}
-
-class Dog(var name: Int) : Runner, Eater {
-	override fun run() {
-		println("산책 시간")
-	}
-
-	override fun eat() {
-		println("사료")
-	}
-}
-```
-
-# 접근 제한자
----
-## Public
-👉 아무것도 쓰지 않을 시 기본적으로 지정되는 제한자
-👉 클래스 외부에서 접근 가능
-
-## Private
-👉 클래스 내부에서만 접근 가능
-
-## Protected
-👉 클래스 자신과 상속받은 클래스만 접근 가능
-
 # 고차함수 / 람다함수
 ---
 👉 함수를 클래스에서 만들어 낸 Instance처럼 취급
@@ -542,6 +474,109 @@ class EventPrinter: EventListener {
 }
 ```
 
+# 접근 제한자
+---
+## Public
+👉 아무것도 쓰지 않을 시 기본적으로 지정되는 제한자
+👉 클래스 외부에서 접근 가능
+
+## Private
+👉 클래스 내부에서만 접근 가능
+
+## Protected
+👉 클래스 자신과 상속받은 클래스만 접근 가능
+# Class 생성
+---
+👉 Java와 달리 생성자를 따로 만들 필요 없음
+👉 객체 생성 시, 클래스의 속성에 따라 입력해주면 됨
+
+``` kotlin
+class User(var name: String, var age: Int, val birth: String) {
+	fun printUser() {
+		println("$name $age $birth")
+	}
+}
+
+// init : 해당 Class를 토대로 객체 생성 시 최초 실행되는 부분 (여러 개 생성 가능)
+class User(var name: String, var age: Int, val birth: String) {
+	init {
+		println("$name $age $birth")
+	}
+	init {
+		println(age)
+	}
+}
+```
+## 상속
+
+👉 부모 클래스에 open 키워드가 설정되어 있어야 함
+👉 서브 클래스의 속성 이름은 부모 클래스의 속성 이름과 달라야 함
+👉 함수를 override할 경우, override 키워드 사용 (부모 클래스의 함수에 open 키워드가 설정되어 있어야 함)
+
+``` kotlin
+open class Animal(var name: String, var age: Int) {
+	open fun introduce() {
+		println("$name $age")
+	}
+}
+
+class Dog(var dog_name: String, var dog_age: Int) : Animal(dog_name, dog_age) {
+	fun dogIntroduce() {
+		super.introduce()
+	}
+
+	override fun introduce() {
+		println("Overrided!")
+	}
+}
+```
+
+## 추상 클래스
+👉 Java와 동일
+
+``` kotlin
+abstract class Animal {
+	abstract fun eat()
+	fun dog() {
+		println("멍멍")
+	}
+}
+
+class Cat : Animal() {
+	override fun eat() {
+		println("츄르")
+	}
+}
+```
+
+## 인터페이스
+👉 Java와 달리 추상 함수와 속성과 일반 함수 선언 가능
+👉 생성자는 생성 불가능
+👉 구현부({})가 있으면, open 함수로 간주하고, 없으면 abstract 함수로 간주함
+
+``` kotlin
+interface Runner {
+	// 추상 함수로 간주
+	fun run()
+}
+
+interface Eater {
+	// open 함수로 간주
+	fun eat() {
+		println("음식")
+	}
+}
+
+class Dog(var name: Int) : Runner, Eater {
+	override fun run() {
+		println("산책 시간")
+	}
+
+	override fun eat() {
+		println("사료")
+	}
+}
+```
 # 다형성 as
 ---
 👉 Class를 Casting하는 역할
@@ -581,29 +616,6 @@ class Cola: Drink() {
 	}
 }
 ```
-
-# Collection List
----
-## listOf
-👉 추가한 객체를 대체, 추가, 삭제하지 못함
-## mutableListOf
-👉 추가한 객체를 대체, 추가, 삭제 가능
-👉 add, sort, shuffle 등 함수 지원
-
-``` kotlin
-fun main() {
-	val a = listOf<Int>(1,2,3)
-	val b = mutableListOf<Int>()
-
-	b.add(1)
-	b.add(2)
-	b.add(3)
-	b.add(2,6)
-	println(a)
-	println(b)
-}
-```
-
 # Data Class
 ---
 👉 Class에 has, equals, toString, copy, componentX 함수를 자동으로 구현해주는 Class
