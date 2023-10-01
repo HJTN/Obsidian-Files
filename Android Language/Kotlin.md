@@ -523,7 +523,43 @@ open class Drink {
 		print("$name을 마십니다")
 	}
 }
+
+class Cola: Drink() {
+	var type = "콜라"
+	override fun drink() {
+		print("$type을 마십니다")
+	}
+	fun washD() {
+		print("$type을 설거지 합니다")
+	}
+}
 ```
+
+# Collection List
+---
+## listOf
+👉 추가한 객체를 대체, 추가, 삭제하지 못함
+## mutableListOf
+👉 추가한 객체를 대체, 추가, 삭제 가능
+👉 add, sort, shuffle 등 함수 지원
+
+``` kotlin
+fun main() {
+	val a = listOf<Int>(1,2,3)
+	val b = mutableListOf<Int>()
+
+	b.add(1)
+	b.add(2)
+	b.add(3)
+	b.add(2,6)
+	print(a)
+	print(b)
+}
+```
+
+# NULL 처리
+---
+
 # 참고 자료
 ---
 1. [코틀린 문법 총정리](https://cjw-awdsd.tistory.com/20)
