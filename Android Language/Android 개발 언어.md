@@ -20,7 +20,7 @@
 1. C 언어와 같이 메모리 관리를 직접 코드로 구현하는 것이 아닌, 코드 자체에 메모리 관리가 되게 끔 고안됨
 2. 파이썬처럼 변수 유형 추론 (타입 추론) 기능
 3. 메모리 관리를 위한 NULL 처리가 확실해서 변수의 빈 값에 대한 Error가 적음
-4. Java에서 작성할 때보다 코드를 짧게 작성할 수 있음
+4. Java에서 작성할 때보다 코드를 짧게 작성할 수 있음 (직관적으로 코드 분석 가능)
 5. Java만큼 캡슐화가 쉬움
 ### Kotlin의 단점
 1. 사람이 해야 할 메모리 작업을 언어 코드 자체에서 메모리를 효율적으로 처리하기 때문에 컴파일 속도가 갈수록 느려짐
@@ -50,7 +50,9 @@ class MainActivity : AppCompatActivity() {
 		setContentView(R.layout.activity_main)
 
 		val button = findViewById<Button>(R.id.button)
-		button.setOnClickListener {}
+		button.setOnClickListener {
+			// TODO
+		}
 	}
 }
 ```
