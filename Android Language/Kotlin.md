@@ -297,7 +297,55 @@ fun b(funs: (String) -> String) {
 # Scope 함수
 ---
 👉 함수형 언어를 편리하게 사용할 수 있도록 도와주는 기본 함수
-##
+## 1. apply
+👉 Instance의 함수나 속성값을 람다함수를 사용해 변경할 수 있는 함수
+👉 코드가 깔끔해짐
+
+``` kotlin
+fun main() {
+	var a = Book("a", 2000)
+	a.apply {
+		name = "b"
+		dc()
+	}
+	a.printData()
+}
+
+class Book(var name: String, var price: Int) {
+	fun dc() {
+		price -= 100
+	}
+
+	fun printData() {
+		print("$name $price")
+	}
+}
+```
+
+## 2. run
+👉 apply와 같은 기능이나, 구문의 마지막 값을 반환해주는 차이
+
+``` kotlin
+fun main() {
+	var a = Book("a", 2000)
+	a.apply {
+		name = "b"
+		dc()
+		"Complete"
+	}
+	a.printData()
+}
+
+class Book(var name: String, var price: Int) {
+	fun dc() {
+		price -= 100
+	}
+
+	fun printData() {
+		print("$name $price")
+	}
+}
+```
 # 참고 자료
 ---
 1. [코틀린 문법 총정리](https://cjw-awdsd.tistory.com/20)
