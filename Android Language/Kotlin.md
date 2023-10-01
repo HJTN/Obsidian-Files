@@ -53,6 +53,34 @@ fun main() {
 	println(num)
 }
 ```
+# NULL 처리
+---
+## ? 처리
+👉 변수값으로 null 지정 가능
+
+``` kotlin
+fun main() {
+	val a: String? = null
+	val b: String = "111"
+	val c: String = null // Error 발생
+}
+```
+## 엘비스 연산자 (?: )
+👉 ?: 왼쪽에 있는 표현식이 null이 아니면 이를 반환하고, 그렇지 않으면 오른쪽에 있는 표현식을 반환
+
+``` kotlin
+val a = b?.length ?: -1
+```
+## !! 처리
+👉 null이 아님을 명시
+
+``` kotlin
+fun main() {
+	val dog: Animal? = Animal()
+	val nonNullDog: Animal = dog!!
+	dog!!.sound()
+}
+```
 # Type 변환
 ---
 👉 to{Type}() 함수로 다른 Type 변환 가능
@@ -75,23 +103,6 @@ fun main() {
 	var intArr3: Array<Any> arrayOf(1, "cmd", 3.2, true)
 	println(intArr)
 }
-```
-
-# 함수 생성
----
-
-``` kotlin
-fun main() {
-	println("Hello Kotlin!")
-}
-
-// 함수 기본형 👉 fun 함수명(매개변수: Type): Return Type {}
-fun add(a: Int, b: Int, c: Int): Int {
-	return a + b + c
-}
-
-// 단일 표현식 함수
-fun add(a: Int, b: Int, c: Int) = a + b + c
 ```
 
 # 조건문
@@ -590,35 +601,6 @@ fun main() {
 	b.add(2,6)
 	println(a)
 	println(b)
-}
-```
-
-# NULL 처리
----
-## ? 처리
-👉 변수값으로 null 지정 가능
-
-``` kotlin
-fun main() {
-	val a: String? = null
-	val b: String = "111"
-	val c: String = null // Error 발생
-}
-```
-## 엘비스 연산자 (?: )
-👉 ?: 왼쪽에 있는 표현식이 null이 아니면 이를 반환하고, 그렇지 않으면 오른쪽에 있는 표현식을 반환
-
-``` kotlin
-val a = b?.length ?: -1
-```
-## !! 처리
-👉 null이 아님을 명시
-
-``` kotlin
-fun main() {
-	val dog: Animal? = Animal()
-	val nonNullDog: Animal = dog!!
-	dog!!.sound()
 }
 ```
 
