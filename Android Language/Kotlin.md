@@ -69,4 +69,50 @@ fun add(a: Int, b: Int, c: Int): Int {
 fun add(a: Int, b: Int, c: Int) = a + b + c
 ```
 
-## 7. 
+## 7. 조건문
+
+``` kotlin
+if (조건) {
+	처리 내용
+} else {
+	처리 내용
+}
+
+// is : 변수값의 Type 비교
+if (a is Int) {
+	처리 내용
+}
+
+// Switch문과 비슷
+when(a) {
+	변수값 종류 -> 처리 내용
+	변수값 종류 -> 처리 내용
+	else -> 처리 내용
+}
+
+// when문으로 변수값 지정 가능
+var b =
+when(a) {
+	1 -> a
+	"cmd" -> a
+	else -> a
+}
+```
+
+## 8. 반복문
+
+``` kotlin
+// While문
+var i: Int = 0
+while(i < 3) {
+	print(i)
+	i++
+}
+
+// for문
+for(i in 0..3) {
+	print(i)
+}
+
+for(i in 3 downTo 0)
+```
