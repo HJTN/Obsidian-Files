@@ -409,6 +409,7 @@ class Book(var name: String, var price: Int) {
 👉 Class 내부에 생성 가능
 
 ``` kotlin
+// Object 생성 -> object 키워드 사용
 fun main() {
 	Counter.countUp()
 	print(Counter.count)
@@ -427,13 +428,15 @@ object Counter {
 	}
 }
 
+// Class 내부에 Object 생성 -> companion object 키워드 사용
 fun main() {
 	var a = Food()
 	var b = Food()
 	a.up()
 	b.up()
-	print("$")
+	print("${Food.total}")
 }
+
 class Food() {
 	companion object {
 		var total = 0
@@ -442,6 +445,17 @@ class Food() {
 	fun up() {
 		total++
 	}
+}
+```
+
+# Observer 패턴
+---
+👉 Listener 또는 Callback이라고 함
+👉 특정 이벤트를 감시하면서 발생 시, 특정 기능이 호출되도록 만든 패턴
+
+``` kotlin
+fun main() {
+	
 }
 ```
 # 참고 자료
