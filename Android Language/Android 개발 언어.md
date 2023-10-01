@@ -25,5 +25,35 @@
 ### Kotlin의 단점
 1. 사람이 해야 할 메모리 작업을 언어 코드 자체에서 메모리를 효율적으로 처리하기 때문에 컴파일 속도가 갈수록 느려짐
 
+``` java
+public class MainActivity extends AppCompatActivity {
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+
+		Button button = findViewById(R.id.button);
+		button.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				// TODO
+			}
+		})
+	}
+}
+```
+
+``` kotlin
+class MainActivity : AppCompatActivity() {
+	override fun onCreate(savedInstanceState: Bundle?) {
+		super.onCreate(savedInstanceState)
+		setContentView(R.layout.activity_main)
+
+		val button = findViewById<Button>(R.id.button)
+		button.setOnClickListener {}
+	}
+}
+```
 # 참고 자료
-1. [앱 개발 언어 소개]()
+1. [앱 개발 언어 소개](https://www.elancer.co.kr/blog/view?seq=151)
+2. 
