@@ -266,14 +266,38 @@ fun main() {
 	b(::a)
 
 	// 람다함수 작성
+	// var 변수명: (입력 Type) -> 반환 Type = {입력 변수명: 입력 Type -> 처리 구문}
 	var c: (String) -> Unit = {s -> print(s)}
 	var d = {s: String -> print(s)}
+	// s 변수 반환
 	var e = {s: String -> s}
+	// Parameter가 없는 경우
 	var f = {
-		print()
+		print("444")
 	}
+	// Parameter가 하나일 경우, it 키워드 사용 가능
+	var g: (String) -> Unit = {print(it)}
+
+	c("111")
+	d("222")
+	print(e("333"))
+	f()
+	g("555")
+}
+
+fun a(str: String): String {
+	return str
+}
+
+fun b(funs: (String) -> String) {
+	print(funs("000"))
 }
 ```
+
+# Scope 함수
+---
+👉 함수형 언어를 편리하게 사용할 수 있도록 도와주는 기본 함수
+##
 # 참고 자료
 ---
 1. [코틀린 문법 총정리](https://cjw-awdsd.tistory.com/20)
