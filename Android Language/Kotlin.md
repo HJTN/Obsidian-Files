@@ -46,6 +46,27 @@ fun main() {
 
 ``` kotlin
 fun main() {
-	var intArr: Array<Int> 
+	var intArr: Array<Int> = arrayOf(1,2,3,4)
+	var intArr2 = arrayOfNulls<Int>(5)
+	var intArr3: Array<Any> arrayOf(1, "cmd", 3.2, true)
+	print(intArr)
 }
 ```
+
+## 6. 함수 생성
+
+``` kotlin
+fun main() {
+	print("Hello Kotlin!")
+}
+
+// 함수 기본형 👉 fun 함수명(매개변수: Type): Return Type {}
+fun add(a: Int, b: Int, c: Int): Int {
+	return a + b + c
+}
+
+// 단일 표현식 함수
+fun add(a: Int, b: Int, c: Int) = a + b + c
+```
+
+## 7. 
