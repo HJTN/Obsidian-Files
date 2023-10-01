@@ -552,12 +552,35 @@ fun main() {
 ## ? 처리
 👉 변수값으로 null 지정 가능
 
+``` kotlin
+fun main() {
+	val a: String? = null
+	val b: String = "111"
+	val c: String = null // Error 발생
+}
+```
 ## 엘비스 연산자 (?: )
 👉 ?: 왼쪽에 있는 표현식이 null이 아니면 이를 반환하고, 그렇지 않으면 오른쪽에 있는 표현식을 반환
-``` kotlin
 
+``` kotlin
+val a = b?.length ?: -1
 ```
+## !! 처리
+👉 null이 아님을 명시
+
+``` kotlin
+fun main() {
+	val dog: Animal? = Animal()
+	val nonNullDog: Animal = dog!!
+	dog!!.sound()
+}
+```
+
+# Data Class
+---
+👉 Class에 has
 # 참고 자료
 ---
 1. [코틀린 문법 총정리](https://cjw-awdsd.tistory.com/20)
 2. [코틀린 기초 문법 정리](https://haruple.tistory.com/206)
+3. [null 처리 방법](https://onlyfor-me-blog.tistory.com/450)
