@@ -677,4 +677,4 @@ enum class tt(val msg: String) {
 2. [코틀린 기초 문법 정리](https://haruple.tistory.com/206)
 3. [null 처리 방법](https://onlyfor-me-blog.tistory.com/450)
 4. [DiMo의 Kotlin 강좌](https://www.youtube.com/watch?v=8RIsukgeUVw&list=PLQdnHjXZyYadiw5aV3p6DwUdXV2bZuhlN&index=1)
-5. 
+5. [코틀린 기본 문법](https://everybody-yeah.tistory.com/9)
