@@ -22,16 +22,6 @@ fun main() {
 }
 ```
 
-## ❇️ ? 표시
-👉 변수값으로 NULL 지정 가능
-
-``` kotlin
-fun main() {
-	var a: Int? = null
-	print(a)
-}
-```
-
 # Type 변환
 ---
 👉 to{Type}() 함수로 다른 Type 변환 가능
@@ -559,21 +549,13 @@ fun main() {
 
 # NULL 처리
 ---
-👉 ?, ?:, !!로 NULL값 처리 가능
+## ? 처리
+👉 변수값으로 null 지정 가능
 
+## 엘비스 연산자 (?: )
+👉 ?: 왼쪽에 있는 표현식이 null이 아니면 이를 반환하고, 그렇지 않으면 오른쪽에 있는 표현식을 반환
 ``` kotlin
-fun main() {
-	val a = listOf<String?>("000", null, "111")
-	val c = mutableListOf<String>()
-	val d = mutableListOf<String>()
-	val e = mutableListOf<String>()
 
-	for(b in a) {
-		// 
-		b?.let { c.add(it) }
-		
-	}
-}
 ```
 # 참고 자료
 ---
