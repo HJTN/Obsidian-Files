@@ -114,5 +114,35 @@ for(i in 0..3) {
 	print(i)
 }
 
-for(i in 3 downTo 0)
+for(i in 3 downTo 0) {
+	print(i)
+}
+
+for(i in 0..5 step 2) {
+	print(i)
+}
+
+for(i in 'a'..'e') {
+	print(i)
+}
+
+// 흐름 제어 (break) 👉 반복 중 종료
+for(i in 0..5) {
+	if(i == 2) {
+		break
+	}
+	print(i)
+}
+
+// 흐름 제어 (continue) 👉 반복 중 건너뛰기
+for(i in 0..5) {
+	if(i == 2) {
+		continue
+	}
+	print(i)
+}
 ```
+
+## 9. Class 생성
+👉 Java와 달리 생성자를 따로 만들 필요 없음
+👉 객체 생성 시, 클래스의 속성에 따라 입
