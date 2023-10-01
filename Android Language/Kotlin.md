@@ -559,7 +559,22 @@ fun main() {
 
 # NULL 처리
 ---
+👉 ?, ?:, !!로 NULL값 처리 가능
 
+``` kotlin
+fun main() {
+	val a = listOf<String?>("000", null, "111")
+	val c = mutableListOf<String>()
+	val d = mutableListOf<String>()
+	val e = mutableListOf<String>()
+
+	for(b in a) {
+		// 
+		b?.let { c.add(it) }
+		
+	}
+}
+```
 # 참고 자료
 ---
 1. [코틀린 문법 총정리](https://cjw-awdsd.tistory.com/20)
