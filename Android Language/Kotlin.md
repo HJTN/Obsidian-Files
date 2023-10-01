@@ -499,6 +499,31 @@ class EventPrinter: EventListener {
 ---
 👉 Class를 Casting하는 역할
 
+``` kotlin
+fun main() {
+	var a = Drink()
+	a.drink()
+
+	var b: Drink = Cola()
+	b.drink()
+
+	if(b is Cola) {
+		b.washD()
+	}
+
+	// Cola와 b로 동시 캐스팅된 c
+	var c = b as Cola
+	c.washD()
+	b.washD()
+}
+
+open class Drink {
+	var name = "음료"
+	open fun drink() {
+		print("$name을 마십니다")
+	}
+}
+```
 # 참고 자료
 ---
 1. [코틀린 문법 총정리](https://cjw-awdsd.tistory.com/20)
