@@ -22,6 +22,22 @@ fun main() {
 }
 ```
 
+## 3. lateinit
+👉 기본 자료형을 제외(String은 가능)하고 객체 생성 시 초기화를 하지 않고 변수만 선언할 수 있음
+
+``` kotlin
+class A {
+	lateinit var a: String
+
+	fun test(): String {
+		if(::a.isInitialized) {
+			return a
+		} else {
+			return "null"
+		}
+	}
+}
+```
 # Type 변환
 ---
 👉 to{Type}() 함수로 다른 Type 변환 가능
@@ -617,7 +633,18 @@ data class b(val name: String, val id: Int)
 
 ``` kotlin
 fun main() {
+	var a = tt.A
+	print(a)
+	print(a.msg)
+	print(a.isA())
+}
 
+enum class tt(val msg: String) {
+	A("a"),
+	B("b"),
+	C("c")
+
+	fun isA() = this == tt.A
 }
 ```
 # 참고 자료
