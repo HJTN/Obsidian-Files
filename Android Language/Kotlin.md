@@ -455,9 +455,50 @@ class Food() {
 
 ``` kotlin
 fun main() {
-	
+	EventPrinter().start()
+}
+
+interface EventListener {
+	fun onEvent(count: Int)
+}
+
+class Counter(var listener: EventListener) {
+	fun count() {
+		for(i in 0..20) {
+			if(i % 5 == 0) {
+				listener.onEvent(i)
+			}
+		}
+	}
+}
+
+class EventPrinter: EventListener {
+	override fun onEvent(count: Int) {
+		print(count)
+	}
+
+	fun start() {
+		var count = Counter(this)
+		count.count()
+	}
+}
+
+// Listener를 익명 클래스로 정의하는 방법
+class EventPrinter: EventListener {
+	fun start() {
+		Counter(object: EventListener {
+			override fun onEvent(count: Int) {
+				print(count)
+			}
+		}).count()
+	}
 }
 ```
+
+# 다형성 as
+---
+👉 Class를 Casting하는 역할
+
 # 참고 자료
 ---
 1. [코틀린 문법 총정리](https://cjw-awdsd.tistory.com/20)
