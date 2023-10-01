@@ -650,7 +650,6 @@ fun main() {
 class a(val name: String, val id: Int)
 data class b(val name: String, val id: Int)
 ```
-
 # enum Class
 ---
 👉 enum처럼 사용하는 Class
@@ -671,6 +670,9 @@ enum class tt(val msg: String) {
 	fun isA() = this == tt.A
 }
 ```
+# by 키워드
+---
+
 # 참고 자료
 ---
 1. [코틀린 문법 총정리](https://cjw-awdsd.tistory.com/20)
