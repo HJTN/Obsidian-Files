@@ -23,3 +23,28 @@ fun main() {
 
 ## 3. ? 표시
 👉 변수값으로 NULL 지정 가능
+
+``` kotlin
+fun main() {
+	var a: Int? = null
+	print(a)
+}
+```
+
+## 4. Type 변환
+👉 to{Type}() 함수로 다른 Type 변환 가능
+
+``` kotlin
+fun main() {
+	var a: Int = 123
+	var b: String = a.toString()
+	print(b)
+}
+```
+
+## 5. 배열 생성
+``` kotlin
+fun main() {
+	var intArr: Array<Int> 
+}
+```
