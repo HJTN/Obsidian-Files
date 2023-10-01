@@ -184,11 +184,37 @@ open class Animal(var name: String, var age: Int) {
 	}
 }
 
-class Dog(var dog_name: String, var dog_age: Int) : Animal(dog_name) {
-	fun introduce
+class Dog(var dog_name: String, var dog_age: Int) : Animal(dog_name, dog_age) {
+	fun dogIntroduce() {
+		super.introduce()
+	}
+
+	override fun introduce() {
+		print("Overrided!")
+	}
 }
 ```
 
+## 추상 클래스
+👉 Java와 동일
+
+``` kotlin
+abstract class Animal {
+	abstract fun eat()
+	fun dog() {
+		print("멍멍")
+	}
+}
+
+class Cat : Animal() {
+	override fun eat() {
+		print("츄르")
+	}
+}
+```
+
+## 인터페이스
+👉 Java와 달리 추상 함수, 
 # 참고 자료
 ---
 1. [코틀린 문법 총정리](https://cjw-awdsd.tistory.com/20)
