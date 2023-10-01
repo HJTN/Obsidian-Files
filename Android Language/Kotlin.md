@@ -382,7 +382,65 @@ fun main() {
 	var price = 4000
 	var a = Book("a", 2000)
 	a.run {
-		// 2000원이 출력되어야 하지만 main문의 price가 우
+		// 2000이 출력되어야 하지만 main문의 price가 Scope 우선 순위가 높아서 4000이 출력됨
+		print(price)
+	}
+}
+
+class Book(var name: String, var price: Int) {
+
+}
+
+fun main() {
+	var price = 4000
+	var a = Book("a", 2000)
+	a.let {
+		print(it.price)
+	}
+}
+
+class Book(var name: String, var price: Int) {
+
+}
+```
+
+## 5. Object
+👉 객체가 하나만 필요한 경우에 사용하는 키워드 (싱글톤 디자인 패턴)
+👉 Class 내부에 생성 가능
+
+``` kotlin
+fun main() {
+	Counter.countUp()
+	print(Counter.count)
+	Counter.clear()
+	print(Counter.count)
+}
+
+object Counter {
+	var count = 0
+	fun countUp() {
+		count++
+	}
+
+	fun clear() {
+		count = 0
+	}
+}
+
+fun main() {
+	var a = Food()
+	var b = Food()
+	a.up()
+	b.up()
+	print("$")
+}
+class Food() {
+	companion object {
+		var total = 0
+	}
+
+	fun up() {
+		total++
 	}
 }
 ```
