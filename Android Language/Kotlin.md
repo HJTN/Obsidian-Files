@@ -43,6 +43,7 @@ fun main() {
 ```
 
 ## 5. 배열 생성
+
 ``` kotlin
 fun main() {
 	var intArr: Array<Int> 
