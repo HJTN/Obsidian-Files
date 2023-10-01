@@ -44,7 +44,8 @@ fun main() {
 }
 ```
 
-## 5. 배열 생성
+# 배열 생성
+---
 
 ``` kotlin
 fun main() {
@@ -55,7 +56,8 @@ fun main() {
 }
 ```
 
-## 6. 함수 생성
+# 함수 생성
+---
 
 ``` kotlin
 fun main() {
@@ -71,7 +73,8 @@ fun add(a: Int, b: Int, c: Int): Int {
 fun add(a: Int, b: Int, c: Int) = a + b + c
 ```
 
-## 7. 조건문
+# 조건문
+---
 
 ``` kotlin
 if (조건) {
@@ -101,7 +104,8 @@ when(a) {
 }
 ```
 
-## 8. 반복문
+# 반복문
+---
 
 ``` kotlin
 // While문
@@ -145,7 +149,8 @@ for(i in 0..5) {
 }
 ```
 
-## 9. Class 생성
+# Class 생성
+---
 👉 Java와 달리 생성자를 따로 만들 필요 없음
 👉 객체 생성 시, 클래스의 속성에 따라 입력해주면 됨
 
@@ -166,3 +171,25 @@ class User(var name: String, var age: Int, val birth: String) {
 	}
 }
 ```
+## 상속
+
+👉 부모 클래스에 open 키워드가 설정되어 있어야 함
+👉 서브 클래스의 속성 이름은 부모 클래스의 속성 이름과 달라야 함
+👉 함수를 override할 경우, override 키워드 사용 (부모 클래스의 함수에 open 키워드가 설정되어 있어야 함)
+
+``` kotlin
+open class Animal(var name: String, var age: Int) {
+	open fun introduce() {
+		print("$name $age")
+	}
+}
+
+class Dog(var dog_name: String, var dog_age: Int) : Animal(dog_name) {
+	fun introduce
+}
+```
+
+# 참고 자료
+---
+1. [코틀린 문법 총정리](https://cjw-awdsd.tistory.com/20)
+2. [코틀린 기초 문법 정리](https://haruple.tistory.com/206)
