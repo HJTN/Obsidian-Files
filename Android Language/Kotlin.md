@@ -328,12 +328,12 @@ class Book(var name: String, var price: Int) {
 ``` kotlin
 fun main() {
 	var a = Book("a", 2000)
-	a.apply {
+	var b = a.run {
 		name = "b"
 		dc()
-		"Complete"
+		"Complete"   // 반환
 	}
-	a.printData()
+	print(b)
 }
 
 class Book(var name: String, var price: Int) {
@@ -343,6 +343,46 @@ class Book(var name: String, var price: Int) {
 
 	fun printData() {
 		print("$name $price")
+	}
+}
+```
+
+## 3. with
+👉 run과 똑같으나, 사용법만 다름
+
+``` kotlin
+fun main() {
+	var a = Book("a", 2000)
+	var b = with(a) {
+		name = "b"
+		dc()
+		"Complete"   // 반환
+	}
+	print(b)
+}
+
+class Book(var name: String, var price: Int) {
+	fun dc() {
+		price -= 100
+	}
+
+	fun printData() {
+		print("$name $price")
+	}
+}
+```
+
+## 4. let / also
+👉 also는 apply와 기능이 비슷하고, let은 run과 기능이 비슷함
+👉 it 키워드를 사용하여 객체의 변수를 참조함
+👉 변수명이 같은 경우, 혼동이 올 수 있어 다음과 같은 기능을 사용
+
+``` kotlin
+fun main() {
+	var price = 4000
+	var a = Book("a", 2000)
+	a.run {
+		// 2000원이 출력되어야 하지만 main문의 price가 우
 	}
 }
 ```
