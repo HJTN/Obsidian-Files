@@ -578,7 +578,48 @@ fun main() {
 
 # Data Class
 ---
-👉 Class에 has
+👉 Class에 has, equals, toString, copy, componentX 함수를 자동으로 구현해주는 Class
+
+``` kotlin
+fun main() {
+	val copyA = a("a", 123)
+
+	print(copyA == a("a", 123))
+	print(copyA)
+
+	val copyB = b("b", 123)
+
+	print(copyB == b("b", 123))
+	print(copyB)
+
+	print(copyB.copy())
+	print(copyB.copy(name="c"))
+	print(copyB.copy(id=234))
+
+	val list = listOf<b>(
+		b("a", 123),
+		b("b", 234),
+		b("c", 345)
+	)
+
+	for((a,b) in list) {
+		print("$a $b")
+	}
+}
+
+class a(val name: String, val id: Int)
+data class b(val name: String, val id: Int)
+```
+
+# enum Class
+---
+👉 enum처럼 사용하는 Class
+
+``` kotlin
+fun main() {
+
+}
+```
 # 참고 자료
 ---
 1. [코틀린 문법 총정리](https://cjw-awdsd.tistory.com/20)
