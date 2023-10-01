@@ -7,7 +7,7 @@
 fun main() {
 	var a: Int
 	a = 123
-	print(a)
+	println(a)
 }
 ```
 ## 2. val
@@ -18,7 +18,7 @@ fun main() {
 fun main() {
 	val a: Int = 1232
 	a = 999 // Error 발생!
-	print(a)
+	println(a)
 }
 ```
 
@@ -38,6 +38,21 @@ class A {
 	}
 }
 ```
+
+## 4. lazy
+👉 변수의 초기화 시점이 변수를 사용할 때 초기화 됨
+
+``` kotlin
+fun main() {
+	val num: Int by lazy {
+		println("초기화")
+		7
+	}
+	println("start")
+	println(num)
+	println(num)
+}
+```
 # Type 변환
 ---
 👉 to{Type}() 함수로 다른 Type 변환 가능
@@ -46,7 +61,7 @@ class A {
 fun main() {
 	var a: Int = 123
 	var b: String = a.toString()
-	print(b)
+	println(b)
 }
 ```
 
@@ -58,7 +73,7 @@ fun main() {
 	var intArr: Array<Int> = arrayOf(1,2,3,4)
 	var intArr2 = arrayOfNulls<Int>(5)
 	var intArr3: Array<Any> arrayOf(1, "cmd", 3.2, true)
-	print(intArr)
+	println(intArr)
 }
 ```
 
@@ -67,7 +82,7 @@ fun main() {
 
 ``` kotlin
 fun main() {
-	print("Hello Kotlin!")
+	println("Hello Kotlin!")
 }
 
 // 함수 기본형 👉 fun 함수명(매개변수: Type): Return Type {}
@@ -117,25 +132,25 @@ when(a) {
 // While문
 var i: Int = 0
 while(i < 3) {
-	print(i)
+	println(i)
 	i++
 }
 
 // for문
 for(i in 0..3) {
-	print(i)
+	println(i)
 }
 
 for(i in 3 downTo 0) {
-	print(i)
+	println(i)
 }
 
 for(i in 0..5 step 2) {
-	print(i)
+	println(i)
 }
 
 for(i in 'a'..'e') {
-	print(i)
+	println(i)
 }
 
 // 흐름 제어 (break) 👉 반복 중 종료
@@ -143,7 +158,7 @@ for(i in 0..5) {
 	if(i == 2) {
 		break
 	}
-	print(i)
+	println(i)
 }
 
 // 흐름 제어 (continue) 👉 반복 중 건너뛰기
@@ -151,7 +166,7 @@ for(i in 0..5) {
 	if(i == 2) {
 		continue
 	}
-	print(i)
+	println(i)
 }
 ```
 
@@ -163,17 +178,17 @@ for(i in 0..5) {
 ``` kotlin
 class User(var name: String, var age: Int, val birth: String) {
 	fun printUser() {
-		print("$name $age $birth")
+		println("$name $age $birth")
 	}
 }
 
 // init : 해당 Class를 토대로 객체 생성 시 최초 실행되는 부분 (여러 개 생성 가능)
 class User(var name: String, var age: Int, val birth: String) {
 	init {
-		print("$name $age $birth")
+		println("$name $age $birth")
 	}
 	init {
-		print(age)
+		println(age)
 	}
 }
 ```
@@ -186,7 +201,7 @@ class User(var name: String, var age: Int, val birth: String) {
 ``` kotlin
 open class Animal(var name: String, var age: Int) {
 	open fun introduce() {
-		print("$name $age")
+		println("$name $age")
 	}
 }
 
@@ -196,7 +211,7 @@ class Dog(var dog_name: String, var dog_age: Int) : Animal(dog_name, dog_age) {
 	}
 
 	override fun introduce() {
-		print("Overrided!")
+		println("Overrided!")
 	}
 }
 ```
@@ -208,13 +223,13 @@ class Dog(var dog_name: String, var dog_age: Int) : Animal(dog_name, dog_age) {
 abstract class Animal {
 	abstract fun eat()
 	fun dog() {
-		print("멍멍")
+		println("멍멍")
 	}
 }
 
 class Cat : Animal() {
 	override fun eat() {
-		print("츄르")
+		println("츄르")
 	}
 }
 ```
@@ -233,17 +248,17 @@ interface Runner {
 interface Eater {
 	// open 함수로 간주
 	fun eat() {
-		print("음식")
+		println("음식")
 	}
 }
 
 class Dog(var name: Int) : Runner, Eater {
 	override fun run() {
-		print("산책 시간")
+		println("산책 시간")
 	}
 
 	override fun eat() {
-		print("사료")
+		println("사료")
 	}
 }
 ```
@@ -273,8 +288,8 @@ fun main() {
 
 	// 람다함수 작성
 	// var 변수명: (입력 Type) -> 반환 Type = {입력 변수명: 입력 Type -> 처리 구문}
-	var c: (String) -> Unit = {s -> print(s)}
-	var d = {s: String -> print(s)}
+	var c: (String) -> Unit = {s -> println(s)}
+	var d = {s: String -> println(s)}
 	// s 변수 반환
 	var e = {s: String -> s}
 	// Parameter가 없는 경우
