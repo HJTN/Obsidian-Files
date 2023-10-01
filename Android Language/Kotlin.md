@@ -168,6 +168,15 @@ for(i in 0..5) {
 	}
 	println(i)
 }
+
+// 반복문에 Label 지정 기능
+fun main() {
+	for(i in 1..10) {
+		for(j in 1..10) {
+			if(i == 1 && j == 2) break
+		}
+	}
+}
 ```
 
 # Class 생성
@@ -294,14 +303,14 @@ fun main() {
 	var e = {s: String -> s}
 	// Parameter가 없는 경우
 	var f = {
-		print("444")
+		println("444")
 	}
 	// Parameter가 하나일 경우, it 키워드 사용 가능
-	var g: (String) -> Unit = {print(it)}
+	var g: (String) -> Unit = {println(it)}
 
 	c("111")
 	d("222")
-	print(e("333"))
+	println(e("333"))
 	f()
 	g("555")
 }
@@ -311,7 +320,7 @@ fun a(str: String): String {
 }
 
 fun b(funs: (String) -> String) {
-	print(funs("000"))
+	println(funs("000"))
 }
 ```
 
@@ -338,7 +347,7 @@ class Book(var name: String, var price: Int) {
 	}
 
 	fun printData() {
-		print("$name $price")
+		println("$name $price")
 	}
 }
 ```
@@ -354,7 +363,7 @@ fun main() {
 		dc()
 		"Complete"   // 반환
 	}
-	print(b)
+	println(b)
 }
 
 class Book(var name: String, var price: Int) {
@@ -363,7 +372,7 @@ class Book(var name: String, var price: Int) {
 	}
 
 	fun printData() {
-		print("$name $price")
+		println("$name $price")
 	}
 }
 ```
@@ -379,7 +388,7 @@ fun main() {
 		dc()
 		"Complete"   // 반환
 	}
-	print(b)
+	println(b)
 }
 
 class Book(var name: String, var price: Int) {
@@ -388,7 +397,7 @@ class Book(var name: String, var price: Int) {
 	}
 
 	fun printData() {
-		print("$name $price")
+		println("$name $price")
 	}
 }
 ```
@@ -404,7 +413,7 @@ fun main() {
 	var a = Book("a", 2000)
 	a.run {
 		// 2000이 출력되어야 하지만 main문의 price가 Scope 우선 순위가 높아서 4000이 출력됨
-		print(price)
+		println(price)
 	}
 }
 
@@ -416,7 +425,7 @@ fun main() {
 	var price = 4000
 	var a = Book("a", 2000)
 	a.let {
-		print(it.price)
+		println(it.price)
 	}
 }
 
@@ -433,9 +442,9 @@ class Book(var name: String, var price: Int) {
 // Object 생성 -> object 키워드 사용
 fun main() {
 	Counter.countUp()
-	print(Counter.count)
+	println(Counter.count)
 	Counter.clear()
-	print(Counter.count)
+	println(Counter.count)
 }
 
 object Counter {
@@ -455,7 +464,7 @@ fun main() {
 	var b = Food()
 	a.up()
 	b.up()
-	print("${Food.total}")
+	println("${Food.total}")
 }
 
 class Food() {
@@ -495,7 +504,7 @@ class Counter(var listener: EventListener) {
 
 class EventPrinter: EventListener {
 	override fun onEvent(count: Int) {
-		print(count)
+		println(count)
 	}
 
 	fun start() {
@@ -509,7 +518,7 @@ class EventPrinter: EventListener {
 	fun start() {
 		Counter(object: EventListener {
 			override fun onEvent(count: Int) {
-				print(count)
+				println(count)
 			}
 		}).count()
 	}
@@ -541,17 +550,17 @@ fun main() {
 open class Drink {
 	var name = "음료"
 	open fun drink() {
-		print("$name을 마십니다")
+		println("$name을 마십니다")
 	}
 }
 
 class Cola: Drink() {
 	var type = "콜라"
 	override fun drink() {
-		print("$type을 마십니다")
+		println("$type을 마십니다")
 	}
 	fun washD() {
-		print("$type을 설거지 합니다")
+		println("$type을 설거지 합니다")
 	}
 }
 ```
@@ -573,8 +582,8 @@ fun main() {
 	b.add(2)
 	b.add(3)
 	b.add(2,6)
-	print(a)
-	print(b)
+	println(a)
+	println(b)
 }
 ```
 
@@ -615,17 +624,17 @@ fun main() {
 fun main() {
 	val copyA = a("a", 123)
 
-	print(copyA == a("a", 123))
-	print(copyA)
+	println(copyA == a("a", 123))
+	println(copyA)
 
 	val copyB = b("b", 123)
 
-	print(copyB == b("b", 123))
-	print(copyB)
+	println(copyB == b("b", 123))
+	println(copyB)
 
-	print(copyB.copy())
-	print(copyB.copy(name="c"))
-	print(copyB.copy(id=234))
+	println(copyB.copy())
+	println(copyB.copy(name="c"))
+	println(copyB.copy(id=234))
 
 	val list = listOf<b>(
 		b("a", 123),
@@ -634,7 +643,7 @@ fun main() {
 	)
 
 	for((a,b) in list) {
-		print("$a $b")
+		println("$a $b")
 	}
 }
 
@@ -649,9 +658,9 @@ data class b(val name: String, val id: Int)
 ``` kotlin
 fun main() {
 	var a = tt.A
-	print(a)
-	print(a.msg)
-	print(a.isA())
+	println(a)
+	println(a.msg)
+	println(a.isA())
 }
 
 enum class tt(val msg: String) {
@@ -667,3 +676,5 @@ enum class tt(val msg: String) {
 1. [코틀린 문법 총정리](https://cjw-awdsd.tistory.com/20)
 2. [코틀린 기초 문법 정리](https://haruple.tistory.com/206)
 3. [null 처리 방법](https://onlyfor-me-blog.tistory.com/450)
+4. [DiMo의 Kotlin 강좌](https://www.youtube.com/watch?v=8RIsukgeUVw&list=PLQdnHjXZyYadiw5aV3p6DwUdXV2bZuhlN&index=1)
+5. 
