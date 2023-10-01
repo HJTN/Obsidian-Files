@@ -214,7 +214,45 @@ class Cat : Animal() {
 ```
 
 ## 인터페이스
-👉 Java와 달리 추상 함수, 
+👉 Java와 달리 추상 함수와 속성과 일반 함수 선언 가능
+👉 생성자는 생성 불가능
+👉 구현부({})가 있으면, open 함수로 간주하고, 없으면 abstract 함수로 간주함
+
+``` kotlin
+interface Runner {
+	// 추상 함수로 간주
+	fun run()
+}
+
+interface Eater {
+	// open 함수로 간주
+	fun eat() {
+		print("음식")
+	}
+}
+
+class Dog(var name: Int) : Runner, Eater {
+	override fun run() {
+		print("산책 시간")
+	}
+
+	override fun eat() {
+		print("사료")
+	}
+}
+```
+
+# 접근 제한자
+---
+## Public
+👉 아무것도 쓰지 않을 시 기본적으로 지정되는 제한자
+👉 클래스 외부에서 접근 가능
+
+## Private
+👉 클래스 내부에서만 접근 가능
+
+## Protected
+👉 클래스 자신과 상속받은 클래스만 접근 가능
 # 참고 자료
 ---
 1. [코틀린 문법 총정리](https://cjw-awdsd.tistory.com/20)
