@@ -720,9 +720,12 @@ class Duser(ce: clickEvent): clickEvent by ce {
 		println("abcde")
 	}
 }
-❇️ 실행 시 
+
+❇️ 실행 시 출력 값
 abcde
 ```
+## Delegation의 장단점
+1. 
 # 참고 자료
 ---
 1. [코틀린 문법 총정리](https://cjw-awdsd.tistory.com/20)
