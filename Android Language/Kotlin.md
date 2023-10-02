@@ -727,6 +727,10 @@ abcde
 ## Property Delegation
 👉 Property의 Getter, Setter를 다른 객체에 위임하는 것
 
+### Character Class with Get(), Set()
+``` kotlin
+
+```
 ## Delegation의 장단점
 1. 상속은 하나의 Super Class만 가능하나, 위임은 복수의 Interface 가능
 2. Interface 정의 필요
