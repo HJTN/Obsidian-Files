@@ -709,7 +709,20 @@ class User(val name: String, val age: Int): clickEvent {
 class DUser(ce: clickEvent): clickEvent by ce
 ```
 ### 위 Code 설명
-👉 DUser Class의 "by" 절은 DUser Class의 객체 내
+👉 DUser Class의 "by" 절은 DUser Class의 객체 내부에 ce를 저장함
+👉 Compiler는 clickEvent Interface의 모든 Method를 ce로 전달하면서 DUser Class 생성
+👉 Override문이 존재하면 Compiler는 위임 객체의 Method 대신에 Override로 구현된 Method를 사용
+
+``` kotlin
+// DUser Class에 override문으로 print() Method 재정의
+class Duser(ce: clickEvent): clickEvent by ce {
+	override fun print() {
+		println("abcde")
+	}
+}
+❇️ 실행 시 
+abcde
+```
 # 참고 자료
 ---
 1. [코틀린 문법 총정리](https://cjw-awdsd.tistory.com/20)
