@@ -690,7 +690,26 @@ enum class tt(val msg: String) {
 👉 Software Engineering에서 위임 패턴은 객체 구성 중 상속과 동일한 코드 재사용을 지원하는 객체 지향 디자인 패턴
 👉 하나의 Class를 다른 Class에 위임하도록 "by" 키워드를 이용하여 위임 선언을 하고, 위임된 Class에 있던 Interface Method를 별도의 참조 없이 호출할 수 있도록 지원하는 기능
 
-
+``` kotlin
+fun main() {  
+    val b = User("홍길동",23)  
+    DUser(b).print()  
+}  
+  
+interface clickEvent {  
+    fun print()  
+}  
+  
+class User(val name: String, val age: Int): clickEvent {  
+    override fun print() {  
+        println("User name: $name, User age: $age")  
+    }  
+}  
+  
+class DUser(ce: clickEvent): clickEvent by ce
+```
+### 위 Code 설명
+👉 DUser Class의 "by" 절은 DUser Class의 객체 내
 # 참고 자료
 ---
 1. [코틀린 문법 총정리](https://cjw-awdsd.tistory.com/20)
