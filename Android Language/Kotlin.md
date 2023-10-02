@@ -724,6 +724,8 @@ class Duser(ce: clickEvent): clickEvent by ce {
 ❇️ 실행 시 출력 값
 abcde
 ```
+## Property Delegation
+👉 Property가 위임된 
 ## Delegation의 장단점
 1. 상속은 하나의 Super Class만 가능하나, 위임은 복수의 Interface 가능
 2. Interface 정의 필요
