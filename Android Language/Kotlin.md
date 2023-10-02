@@ -730,7 +730,64 @@ abcde
 👉 Property의 Getter, Setter를 다른 객체에 위임하는 것
 ### Character Class with Get(), Set()
 ``` kotlin
-
+fun main() {  
+    val character = Character()  
+    character.apply {   
+hp = 100  
+        mp = 200  
+    }  
+    println("${character.hp} ${character.mp}")  
+}  
+  
+class Character {  
+    var hp: Int = 0  
+        get() {  
+            println("Get hp : $field")  
+            return field  
+        }  
+        set(value) {  
+            println("Set hp : $value")  
+            field = value  
+        }  
+    var mp: Int = 0  
+        get() {  
+            println("Get mp : $field")  
+            return field  
+        }  
+        set(value) {  
+            println("Set mp : $value")  
+            field = value  
+        }  
+}
+```
+### Character Class with by
+``` kotlin
+import kotlin.reflect.KProperty  
+  
+fun main() {  
+    val character = Character(0,0)  
+    character.apply {  
+        hp = 100  
+        mp = 200  
+    }  
+    println("${character.hp} ${character.mp}")  
+}  
+  
+class Delegator(private var value: Int) {  
+    operator fun getValue(thisRef: Any?, property: KProperty<*>): Int {  
+        println("Get ${property.name} : $value")  
+        return value  
+    }  
+    operator fun setValue(thisRef: Any?, property: KProperty<*>, newValue: Int) {  
+        println("Set ${property.name} : $newValue")  
+        value = newValue  
+    }  
+}  
+  
+class Character(hp: Int, mp: Int) {  
+    var hp by Delegator(hp)  
+    var mp by Delegator(mp)  
+}
 ```
 ## Delegation의 장단점
 1. 상속은 하나의 Super Class만 가능하나, 위임은 복수의 Interface 가능
