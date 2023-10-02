@@ -672,6 +672,11 @@ enum class tt(val msg: String) {
 ```
 # by 키워드
 ---
+## Delegation (위임)
+👉 어떤 일의 책임 & 처리를 다른 Class 혹은 Method에게 넘긴다는 의미
+👉 다른 Class의 기능을 사용하되 그 기능을 변경하지 않는 경우, 상속 대신 위임을 사용
+👉 위임을 활용하면 하나의 객체가 다른 객체에 미치는 영향이 감소함
+## Delegation을 사용하는 이유
 
 # 참고 자료
 ---
@@ -680,3 +685,5 @@ enum class tt(val msg: String) {
 3. [null 처리 방법](https://onlyfor-me-blog.tistory.com/450)
 4. [DiMo의 Kotlin 강좌](https://www.youtube.com/watch?v=8RIsukgeUVw&list=PLQdnHjXZyYadiw5aV3p6DwUdXV2bZuhlN&index=1)
 5. [코틀린 기본 문법](https://everybody-yeah.tistory.com/9)
+6. [by the way, what is this?](https://velog.io/@jojo_devstory/%EC%BD%94%ED%8B%80%EB%A6%B0-Kotlin-by-by-the-way-what-is-this)
+7. [Kotlin By 키워드에 대한 이해](https://developer88.tistory.com/entry/Kotlin-By-%ED%82%A4%EC%9B%8C%EB%93%9C%EC%97%90-%EB%8C%80%ED%95%9C-%EC%9D%B4%ED%95%B4-Property-Delegate-Pattern)
