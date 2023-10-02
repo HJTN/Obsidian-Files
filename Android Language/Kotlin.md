@@ -804,3 +804,4 @@ class Character(hp: Int, mp: Int) {
 6. [by the way, what is this?](https://velog.io/@jojo_devstory/%EC%BD%94%ED%8B%80%EB%A6%B0-Kotlin-by-by-the-way-what-is-this)
 7. [Kotlin By 키워드에 대한 이해](https://developer88.tistory.com/entry/Kotlin-By-%ED%82%A4%EC%9B%8C%EB%93%9C%EC%97%90-%EB%8C%80%ED%95%9C-%EC%9D%B4%ED%95%B4-Property-Delegate-Pattern)
 8. [Delegated Property](https://velog.io/@evergreen_tree/KotlinDelegation-2.-Delegated-Property)
+9. [Kotlin의 클래스 위임은 어떻게 동작하는가](https://medium.com/til-kotlin-ko/kotlin%EC%9D%98-%ED%81%B4%EB%9E%98%EC%8A%A4-%EC%9C%84%EC%9E%84%EC%9D%80-%EC%96%B4%EB%96%BB%EA%B2%8C-%EB%8F%99%EC%9E%91%ED%95%98%EB%8A%94%EA%B0%80-c14dcbbb08ad)
