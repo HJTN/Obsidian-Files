@@ -725,7 +725,8 @@ class Duser(ce: clickEvent): clickEvent by ce {
 abcde
 ```
 ## Property Delegation
-👉 Property가 위임된 
+👉 Property의 Getter, Setter를 다른 객체에 위임하는 것
+
 ## Delegation의 장단점
 1. 상속은 하나의 Super Class만 가능하나, 위임은 복수의 Interface 가능
 2. Interface 정의 필요
@@ -740,3 +741,4 @@ abcde
 5. [코틀린 기본 문법](https://everybody-yeah.tistory.com/9)
 6. [by the way, what is this?](https://velog.io/@jojo_devstory/%EC%BD%94%ED%8B%80%EB%A6%B0-Kotlin-by-by-the-way-what-is-this)
 7. [Kotlin By 키워드에 대한 이해](https://developer88.tistory.com/entry/Kotlin-By-%ED%82%A4%EC%9B%8C%EB%93%9C%EC%97%90-%EB%8C%80%ED%95%9C-%EC%9D%B4%ED%95%B4-Property-Delegate-Pattern)
+8. [Delegated Property](https://velog.io/@evergreen_tree/KotlinDelegation-2.-Delegated-Property)
