@@ -677,7 +677,15 @@ enum class tt(val msg: String) {
 👉 다른 Class의 기능을 사용하되 그 기능을 변경하지 않는 경우, 상속 대신 위임을 사용
 👉 위임을 활용하면 하나의 객체가 다른 객체에 미치는 영향이 감소함
 ## Delegation을 사용하는 이유
-
+👉 하위 Class가 상위 Class를 상속 받아서 상위 Class의 Method를 Override하는 경우가 많음
+👉 프로그램을 유지 보수하는 경우, 상위 Class의 내용이 변경되면 하위 Class에서 Error가 발생할 수 있음
+## 상속의 문제점
+1. 상/하위 Class 간의 결합도가 높아지거나 상속 구조가 복잡해질 경우, 상위 Class의 변화가 하위 Class에 주는 영향을 예측하기 어려움
+2. 불필요한 상위 Class의 Method까지 구현할 필요가 있음
+3. final Class의 경우, 상속이 불가능
+4. 하위 Class로 내려갈수록 기능이 추가되면서 Error를 파악하기 어려움
+👉 Kotlin의 경우, 상속으로 인한 종속성, 의존성 문제를 방지하기 위해 Class의 기
+## 
 # 참고 자료
 ---
 1. [코틀린 문법 총정리](https://cjw-awdsd.tistory.com/20)
