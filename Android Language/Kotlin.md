@@ -690,6 +690,8 @@ enum class tt(val msg: String) {
 👉 Software Engineering에서 위임 패턴은 객체 구성 중 상속과 동일한 코드 재사용을 지원하는 객체 지향 디자인 패턴
 👉 하나의 Class를 다른 Class에 위임하도록 "by" 키워드를 이용하여 위임 선언을 하고, 위임된 Class에 있던 Interface Method를 별도의 참조 없이 호출할 수 있도록 지원하는 기능
 
+## Class Delegation
+
 ``` kotlin
 fun main() {  
     val b = User("홍길동",23)  
@@ -726,7 +728,6 @@ abcde
 ```
 ## Property Delegation
 👉 Property의 Getter, Setter를 다른 객체에 위임하는 것
-
 ### Character Class with Get(), Set()
 ``` kotlin
 
