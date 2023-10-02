@@ -725,7 +725,10 @@ class Duser(ce: clickEvent): clickEvent by ce {
 abcde
 ```
 ## Delegation의 장단점
-1. 
+1. 상속은 하나의 Super Class만 가능하나, 위임은 복수의 Interface 가능
+2. Interface 정의 필요
+3. Code가 유연해지나, 관련 지식이 없으면 이해하기 어려움
+4. 상속은 객체의 크기에 따라 비용이 증가
 # 참고 자료
 ---
 1. [코틀린 문법 총정리](https://cjw-awdsd.tistory.com/20)
