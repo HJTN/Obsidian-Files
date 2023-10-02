@@ -672,11 +672,11 @@ enum class tt(val msg: String) {
 ```
 # by 키워드
 ---
-## Delegation (위임)
+## **Delegation (위임)**
 👉 어떤 일의 책임 & 처리를 다른 Class 혹은 Method에게 넘긴다는 의미
 👉 다른 Class의 기능을 사용하되 그 기능을 변경하지 않는 경우, 상속 대신 위임을 사용
 👉 위임을 활용하면 하나의 객체가 다른 객체에 미치는 영향이 감소함
-## Delegation을 사용하는 이유
+## **Delegation**을 사용하는 이유
 👉 하위 Class가 상위 Class를 상속 받아서 상위 Class의 Method를 Override하는 경우가 많음
 👉 프로그램을 유지 보수하는 경우, 상위 Class의 내용이 변경되면 하위 Class에서 Error가 발생할 수 있음
 ## 상속의 문제점
@@ -686,7 +686,7 @@ enum class tt(val msg: String) {
 4. 하위 Class로 내려갈수록 기능이 추가되면서 Error를 파악하기 어려움
 👉 Kotlin의 경우, 상속으로 인한 종속성, 의존성 문제를 방지하기 위해 Class는 기본적으로 final 접근자로 지정됨
 👉 상속이 필요한 경우, Class를 open 접근자로 명시해야 함
-## Delegation Pattern
+## **Delegation Pattern**
 👉 Software Engineering에서 위임 패턴은 객체 구성 중 상속과 동일한 코드 재사용을 지원하는 객체 지향 디자인 패턴
 👉 하나의 Class를 다른 Class에 위임하도록 "by" 키워드를 이용하여 위임 선언을 하고, 위임된 Class에 있던 Interface Method를 별도의 참조 없이 호출할 수 있도록 지원하는 기능
 
