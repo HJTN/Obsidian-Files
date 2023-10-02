@@ -684,8 +684,13 @@ enum class tt(val msg: String) {
 2. 불필요한 상위 Class의 Method까지 구현할 필요가 있음
 3. final Class의 경우, 상속이 불가능
 4. 하위 Class로 내려갈수록 기능이 추가되면서 Error를 파악하기 어려움
-👉 Kotlin의 경우, 상속으로 인한 종속성, 의존성 문제를 방지하기 위해 Class의 기
-## 
+👉 Kotlin의 경우, 상속으로 인한 종속성, 의존성 문제를 방지하기 위해 Class는 기본적으로 final 접근자로 지정됨
+👉 상속이 필요한 경우, Class를 open 접근자로 명시해야 함
+## Delegation Pattern
+👉 Software Engineering에서 위임 패턴은 객체 구성 중 상속과 동일한 코드 재사용을 지원하는 객체 지향 디자인 패턴
+👉 하나의 Class를 다른 Class에 위임하도록 "by" 키워드를 이용하여 위임 선언을 하고, 위임된 Class에 있던 Interface Method를 별도의 참조 없이 호출할 수 있도록 지원하는 기능
+
+
 # 참고 자료
 ---
 1. [코틀린 문법 총정리](https://cjw-awdsd.tistory.com/20)
