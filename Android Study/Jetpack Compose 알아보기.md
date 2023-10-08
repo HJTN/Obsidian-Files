@@ -16,4 +16,5 @@
 # 참고 자료
 1. [Android Compose 문서](https://developer.android.com/jetpack/compose?hl=ko)
 2. [Jetpack Compose 기초](https://developer.android.com/codelabs/jetpack-compose-basics?hl=ko&continue=https%3A%2F%2Fdeveloper.android.com%2Fcourses%2Fpathways%2Fjetpack-compose-for-android-developers-1%3Fhl%3Dko%23codelab-https%3A%2F%2Fdeveloper.android.com%2Fcodelabs%2Fjetpack-compose-basics#0)
-3. 
+3. [기존 App에 Compose 기능 추가](https://developer.android.com/jetpack/compose/setup?hl=ko)
+4. 
