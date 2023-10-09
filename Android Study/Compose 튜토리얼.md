@@ -42,3 +42,5 @@
 # 13. 
 # 참고 자료
 1. [Jetpack Compose 기초](https://developer.android.com/codelabs/jetpack-compose-basics?hl=ko&continue=https%3A%2F%2Fdeveloper.android.com%2Fcourses%2Fpathways%2Fjetpack-compose-for-android-developers-1%3Fhl%3Dko%23codelab-https%3A%2F%2Fdeveloper.android.com%2Fcodelabs%2Fjetpack-compose-basics#2)
+2. ![Jetpack Compose basics code-along](https://youtu.be/k3jvNqj4m08)
+3. 
