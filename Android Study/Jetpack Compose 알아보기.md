@@ -11,9 +11,12 @@
 - Annotation은 지속적으로 UI를 업데이트하고, 유지관리하기 위해 함수에 특수 지원을 추가하도록 Compose에 알려주는 역할
 - 새로운 UI 구성요소를 만들기 위해서는 Composable 함수만 만들어주면 됨
 
-# [[Compose 튜토리얼]]
+
+# 
+---
 
 # 참고 자료
+---
 1. [Android Compose 문서](https://developer.android.com/jetpack/compose?hl=ko)
 2. [기존 App에 Compose 기능 추가](https://developer.android.com/jetpack/compose/setup?hl=ko)
 3. 
