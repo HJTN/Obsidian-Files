@@ -19,5 +19,9 @@
 ---
 1. [Android Compose 문서](https://developer.android.com/jetpack/compose?hl=ko)
 2. [기존 App에 Compose 기능 추가](https://developer.android.com/jetpack/compose/setup?hl=ko)
-3. [Jetpack Compose 기초](https://developer.android.com/codelabs/jetpack-compose-basics?hl=ko&continue=https%3A%2F%2Fdeveloper.android.com%2Fcourses%2Fpathways%2Fjetpack-compose-for-android-developers-1%3Fhl%3Dko%23codelab-https%3A%2F%2Fdeveloper.android.com%2Fcodelabs%2Fjetpack-compose-basics#6)
-4. [Material Design 3](https://m3.material.io/)
+3. [Material Design 3](https://m3.material.io/)
+
+# Tutorial 참고
+---
+1. [Jetpack Compose 기초](https://developer.android.com/codelabs/jetpack-compose-basics?hl=ko&continue=https%3A%2F%2Fdeveloper.android.com%2Fcourses%2Fpathways%2Fjetpack-compose-for-android-developers-1%3Fhl%3Dko%23codelab-https%3A%2F%2Fdeveloper.android.com%2Fcodelabs%2Fjetpack-compose-basics#6)
+2. 
