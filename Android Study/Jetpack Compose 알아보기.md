@@ -30,6 +30,11 @@
 - Animation 기능을 통해 쉽고 빠르게 동작을 부여할 수 있음
 - 원하는 디자인을 유연하게 구현하여 Compose에 적용 가능
 
+# Compose 이해하기
+---
+## 선언형 Programming Paradigm
+
+
 # Composable 함수
 ---
 - **@Composable** annotation을 이용한 일반 함수이며, 다른 Composable 함수를 호출 가능
