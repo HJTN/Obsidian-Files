@@ -17,6 +17,16 @@
 
 - **선언적 API 사용**을 통해 Compose가 나머지 처리를 맡아서 하므로 UI를 설명하기만 하면 됨
 - 특정 활동이나 Fragment에 종속되지 않는 **Stateless 구성 요소**를 빌드하여 코드를 재사용하고, 테스트하기 쉬움
+- 상태가 명시적이고, Composable로 전달하여 상태에 관한 정보 출처가 하나가 되도록 캡슐화하고 분리함
+
+## 빠른 개발 과정
+
+- Views, Navigation, ViewModel, Kotlin Coroutine 등 Compose와 함께 작동
+- 실시간 미리보기 기능을 사용하여 코드를 더 빠르게 확인하고 수정 가능
+
+## 강력한 성능
+
+- 
 # Composable 함수
 ---
 - **@Composable** annotation을 이용한 일반 함수이며, 다른 Composable 함수를 호출 가능
