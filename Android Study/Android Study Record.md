@@ -5,4 +5,5 @@
 ### 3. [[Kotlin]]
 # Jetpack Compose 공부 👇
 ---
-### 1. [[Jetpack Compose 정의 및 특징]]
+### 1. [[Compose 정의 및 특징]]
+### 2. [[Compose 이해하기]]

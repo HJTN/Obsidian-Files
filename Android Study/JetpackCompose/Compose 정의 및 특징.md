@@ -30,20 +30,6 @@
 - Animation 기능을 통해 쉽고 빠르게 동작을 부여할 수 있음
 - 원하는 디자인을 유연하게 구현하여 Compose에 적용 가능
 
-# Compose 이해하기
----
-## 선언형 Programming Paradigm
-
-
-# Composable 함수
----
-- **@Composable** annotation을 이용한 일반 함수이며, 다른 Composable 함수를 호출 가능
-- Annotation은 지속적으로 UI를 업데이트하고, 유지관리하기 위해 함수에 특수 지원을 추가하도록 Compose에 알려주는 역할
-- 새로운 UI 구성요소를 만들기 위해서는 Composable 함수만 만들어주면 됨
-
-# 
----
-
 # 참고 자료
 ---
 1. [Android Compose 문서](https://developer.android.com/jetpack/compose?hl=ko)
@@ -53,4 +39,4 @@
 # Tutorial 참고
 ---
 1. [Jetpack Compose 기초](https://developer.android.com/codelabs/jetpack-compose-basics?hl=ko&continue=https%3A%2F%2Fdeveloper.android.com%2Fcourses%2Fpathways%2Fjetpack-compose-for-android-developers-1%3Fhl%3Dko%23codelab-https%3A%2F%2Fdeveloper.android.com%2Fcodelabs%2Fjetpack-compose-basics#6)
-2. 
+2. [Jetpack Compose 튜토리얼](https://developer.android.com/jetpack/compose/tutorial?hl=ko)
